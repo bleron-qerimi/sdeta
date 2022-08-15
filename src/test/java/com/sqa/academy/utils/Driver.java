@@ -10,8 +10,6 @@ public class Driver {
     private static WebDriver driver;
     private Driver(){
     }
-
-
     public static WebDriver getDriver(){
         String browser=ConfigurationReader.get("browser");
         switch (browser){
@@ -25,19 +23,13 @@ public class Driver {
                 driver=new FirefoxDriver();
                 //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                 break;
-
             case "edge":
                 WebDriverManager.edgedriver().setup();
                 driver=new EdgeDriver();
                 //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                 break;
-
-
-
         }
-
         return driver;
-
     }
     public static void  close(){
         if(driver!=null) {
