@@ -1,11 +1,9 @@
-package com.sqa.academy.actions.Eron;
+package com.sqa.academy.actions.SDETA2;
 
 import com.sqa.academy.utils.Driver;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
