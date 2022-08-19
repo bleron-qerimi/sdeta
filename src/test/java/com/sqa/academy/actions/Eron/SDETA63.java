@@ -1,5 +1,6 @@
 package com.sqa.academy.actions.Eron;
 
+import com.sqa.academy.utils.Driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,16 +13,14 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class SDETA63 {
-
-    protected WebDriver driver;
-    String url="https://petstore.octoperf.com/";
+    static WebDriver driver = null;
+    static String url="https://petstore.octoperf.com/";
     @BeforeMethod
     public void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        //driver= driver.getDriver();
+        driver = Driver.getDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get(url);
+
     }
     @AfterMethod
     public void tareDown(){
@@ -34,7 +33,7 @@ public class SDETA63 {
 
     @Test
     public  void signIn() throws Exception {
-        driver.get(url);
+        driver.manage().window().maximize();
         WebElement enterStore=driver.findElement(By.xpath("//p/a"));
         Thread.sleep(1000);
         enterStore.click();
