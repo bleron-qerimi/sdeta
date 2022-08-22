@@ -1,5 +1,8 @@
-package com.sqa.academy.pages;
+package com.sqa.academy.actions.SDETA2;
 
+import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.utils.ConfigurationReader;
+import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,26 +12,13 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Hooks {
-    protected WebDriver driver;
-    String url="https://petstore.octoperf.com/";
-    @BeforeMethod
-    public void setUp(){
-        //driver= driver.getDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
-    @AfterMethod
-    public void tareDown(){
-        driver.close();
-        driver.quit();
-    }
-    public static void main(String[] args) {
+public class SignUpProcedurePetshop extends Hooks {
 
-    }
 
     @Test
     public  void signIn() throws Exception {
-
+        String url=ConfigurationReader.get("url");
+        driver.get(url);
         WebElement enterStore=driver.findElement(By.xpath("//p/a"));
         Thread.sleep(1000);
         enterStore.click();
