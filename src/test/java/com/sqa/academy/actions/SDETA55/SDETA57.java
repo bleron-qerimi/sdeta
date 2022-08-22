@@ -18,10 +18,6 @@ import java.util.Random;
 public class SDETA57 extends Hooks {
     @Test
     public static void addToCart() {
-        HomePage homePage=new HomePage(driver);
-        homePage.search("hello");
-
-
 
         List<WebElement> animalSpecies = driver.findElements(By.xpath("//*[@id=\"SidebarContent\"]/a"));
         int min = 1;
