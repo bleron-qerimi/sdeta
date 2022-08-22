@@ -5,7 +5,6 @@ import java.util.Properties;
 
 public class ConfigurationReader {
     private static Properties properties;
-
     static{
         try {
             String path="configure.properties";
@@ -18,13 +17,8 @@ public class ConfigurationReader {
         }catch (Exception e){
             e.printStackTrace();
         }
-
-
-
     }
-
     public static String get(String key){
         return properties.getProperty(key);
-
     }
 }

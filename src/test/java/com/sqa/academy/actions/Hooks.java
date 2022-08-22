@@ -9,17 +9,15 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 public class Hooks {
-    WebDriver driver;
-@BeforeMethod
-public void setUp() {
+    public static WebDriver driver;
+    @BeforeMethod
+    public void setUp() {
     WebDriverManager.chromedriver().setup();
     driver = Driver.getDriver();
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     driver.manage().window().maximize();
 
-
 }
-
     @AfterMethod
     public void tearDown(){
     driver.quit();
