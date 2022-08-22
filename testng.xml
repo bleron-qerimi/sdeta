@@ -4,10 +4,16 @@
     <test verbose="2" preserve-order="true" name="C:/Users/LabinotGjoka/IdeaProjects/sdeta">
         <classes>
             <class name="com.sqa.academy.actions.TheUserShouldSeeAllThePetsInASpecificOrder">
-                <methods>
-                    <include name="petOrder"/>
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="petOrder"/>-->
+<!--                </methods>-->
             </class>
+
+            <class name="com.sqa.academy.actions.SDETA55.SDETA57"></class>
+            <class name="com.sqa.academy.actions.SDETA55.SDETA60"></class>
+            <class name="com.sqa.academy.actions.SDETA55.SDETA62"></class>
+            <class name="com.sqa.academy.actions.SDETA55.SDETA69"></class>
+
         </classes>
     </test>
 </suite>

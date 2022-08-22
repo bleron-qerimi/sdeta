@@ -1,5 +1,8 @@
 package com.sqa.academy.actions.SDETA55;
 
+import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.pages.HomePage;
+import com.sqa.academy.utils.ConfigurationReader;
 import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,22 +15,14 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
-public class SDETA57{
-    static WebDriver driver = null;
-    static String url="https://petstore.octoperf.com/actions/Catalog.action";
-    @BeforeMethod
-    public void setUp(){
-        driver = Driver.getDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(url);
-    }
-    @AfterMethod
-    public void tearDown(){
-        driver.close();
-        driver.quit();
-    }
+public class SDETA57 extends Hooks {
     @Test
     public static void addToCart() {
+        HomePage homePage=new HomePage(driver);
+        homePage.search("hello");
+
+
+
         List<WebElement> animalSpecies = driver.findElements(By.xpath("//*[@id=\"SidebarContent\"]/a"));
         int min = 1;
         int max = animalSpecies.size();
