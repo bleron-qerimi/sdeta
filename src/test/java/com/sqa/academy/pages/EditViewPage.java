@@ -5,22 +5,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DeleteInEditViewPage {
+public class EditViewPage {
     WebDriver driver;
 
-    public DeleteInEditViewPage(WebDriver driver){
+    public EditViewPage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }
     @FindBy(xpath = "//td/a")
     WebElement firstPage;
-
-    @FindBy(xpath = "//*[@id=\"main\"]/form[2]/input")
-    WebElement editView;
-
     public void clickOnFirstPage(){
         firstPage.click();
     }
+    @FindBy(xpath = "//*[@id=\"main\"]/form[2]/input")
+    WebElement editView;
+
     public void clickOnEditPage(){
         editView.click();
     }
