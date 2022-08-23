@@ -13,6 +13,7 @@
             <class name="com.sqa.academy.actions.SDETA43.FillTheForm"></class>
             <class name="com.sqa.academy.actions.SDETA43.NewComputerCreated"></class>
             <class name="com.sqa.academy.actions.SDETA43.RedirectToNewView"></class>
+            <class name="com.sqa.academy.actions.SDETA43.NewComputerCreated"></class>
 
         </classes>
     </test>
