@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public abstract class ComputerDatabaseElements {
+import java.util.List;
+
+public  class ComputerDatabaseElements {
     public ComputerDatabaseElements(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
@@ -23,4 +25,7 @@ public abstract class ComputerDatabaseElements {
     public WebElement search;
     @FindBy(xpath = "//*[@id=\"searchsubmit\"]")
     public WebElement searchBtn;
+
+    @FindBy(xpath = "//*[@id=\"main\"]/table/thead/tr/th/a")
+    public List<WebElement> arrangedButtons;
 }
