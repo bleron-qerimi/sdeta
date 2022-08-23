@@ -14,6 +14,7 @@ public class FillTheForm extends Hooks {
 
     @Test
     public static void FillForm() throws Exception {
+        //user should be able to fill the form
         ComputerDatabaseElements elements = new ComputerDatabaseElements(driver);
         String url = ConfigurationReader.get("formUrl");
         driver.get(url);

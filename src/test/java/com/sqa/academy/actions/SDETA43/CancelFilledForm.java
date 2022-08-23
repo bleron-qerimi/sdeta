@@ -14,6 +14,8 @@ import java.util.Objects;
 public class CancelFilledForm extends Hooks {
     @Test
     public static void CancelForm() throws Exception{
+       /* When a user fills the form. And Clicks the Cancel Button. Then nothing should be stored/saved.
+        After filling the form user should be able to cancel saving new computer.*/
         ComputerDatabaseElements elements = new ComputerDatabaseElements(driver);
         String url = ConfigurationReader.get("formUrl");
         driver.get(url);

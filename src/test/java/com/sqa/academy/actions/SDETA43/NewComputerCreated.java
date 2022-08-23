@@ -16,9 +16,11 @@ public class NewComputerCreated extends Hooks {
     //new computer should be created
     @Test
     public static void ComputerCreated() throws Exception {
+        //When a user fills the form. And Clicks the Save Button. Then a new Computer should be created.
         ComputerDatabaseElements elements = new ComputerDatabaseElements(driver);
         String url = ConfigurationReader.get("formUrl");
         driver.get(url);
+        //PRECONDITION Fill the form
         WebElement computerName = elements.addName;
         computerName.sendKeys("HP1");
         WebElement introduced = elements.addIntroduced;

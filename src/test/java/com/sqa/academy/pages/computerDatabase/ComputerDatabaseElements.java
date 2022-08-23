@@ -29,6 +29,14 @@ public  class ComputerDatabaseElements {
     public WebElement searchBtn;
     @FindBy(xpath = "//*[@id=\"main\"]/form/div/a")
     public WebElement cancelBtn;
+    @FindBy(xpath="//*[@id=\"main\"]/form/fieldset/div[1]/label")
+    public WebElement computerName;
+    @FindBy(xpath = "//*[@id=\"main\"]/form/fieldset/div[2]/label")
+    public WebElement introduced;
+    @FindBy(xpath="//*[@id=\"main\"]/form/fieldset/div[3]/label")
+    public WebElement discontinued;
+    @FindBy(xpath="//*[@id=\"main\"]/form/fieldset/div[4]/label")
+    public WebElement company;
 
     @FindBy(xpath = "//*[@id=\"main\"]/table/thead/tr/th/a")
     public List<WebElement> arrangedButtons;

@@ -13,8 +13,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class ComputerIsNotCreated extends Hooks {
-    //computer is not stored, it is a bug
-
+    //computer is not stored in the computer database
     @Test(expectedExceptions = IllegalArgumentException.class)
     public static void ComputerIsNotStored() {
         {
