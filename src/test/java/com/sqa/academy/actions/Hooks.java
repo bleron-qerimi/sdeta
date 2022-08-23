@@ -11,7 +11,7 @@ import java.time.Duration;
 public class Hooks {
     public static WebDriver driver;
     @BeforeMethod
-    public void setUp() {
+    public static void setUp() {
     WebDriverManager.chromedriver().setup();
     driver = Driver.getDriver();
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -19,7 +19,7 @@ public class Hooks {
 
 }
     @AfterMethod
-    public void tearDown(){
+    public static void tearDown(){
     driver.quit();
     if (driver!=null){
         Driver.close();
