@@ -1,18 +1,12 @@
 package com.sqa.academy.actions.SDETA53PetViews;
 
-import com.sqa.academy.actions.GenerlPetStore;
+import com.sqa.academy.actions.GenerlSteps;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.Category;
 import com.sqa.academy.pages.jPetStore.HomePage;
 import com.sqa.academy.pages.jPetStore.SunCategory;
-import com.sqa.academy.utils.ConfigurationReader;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CheckDesiredTabularLayout extends Hooks {
 
@@ -21,7 +15,7 @@ public class CheckDesiredTabularLayout extends Hooks {
     public static void checkDesiredTabularLayout(){
 
         //Go to env
-        GenerlPetStore.gotToEnv("JPetStore");
+        GenerlSteps.gotToEnv("JPetStore");
         // Click on a pet  from homePage
         HomePage hp=new HomePage(driver);
 
