@@ -1,13 +1,29 @@
-package com.sqa.academy.pages;
+package com.sqa.academy.pages.jPetStore;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class WrongCredentialsPage {
+public class SignUpPage {
+
     WebDriver driver;
+
+    @FindBy(xpath = "//p/a")
+    WebElement enterStore;
+
+    @FindBy(xpath = "//div/a[2]")
+    WebElement logIn;
+
+    @FindBy(xpath = "//form/following-sibling::a")
+    WebElement signInButton;
+
+    public void goTosignInForm(){
+        enterStore.click();
+        logIn.click();
+        signInButton.click();
+    }
+
 
     @FindBy(name="username")
     WebElement userName;
@@ -21,10 +37,18 @@ public class WrongCredentialsPage {
     @FindBy(name = "newAccount")
     WebElement registerButton;
 
-    public WrongCredentialsPage(WebDriver driver){
+
+    @FindBy(name="newAccount")
+    WebElement register;
+
+    public SignUpPage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }
+    public void clickOnSaveAccount(){
+        register.click();
+    }
+
 
     public void enterUsername(String arg1){
         userName.sendKeys(arg1);

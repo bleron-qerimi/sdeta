@@ -2,8 +2,8 @@ package com.sqa.academy.actions.SDETA55;
 
 
 import com.sqa.academy.actions.Hooks;
-import com.sqa.academy.pages.AbstractBasePage;
-import com.sqa.academy.pages.HomePage;
+import com.sqa.academy.pages.jPetStore.AbstractBasePage;
+import com.sqa.academy.pages.jPetStore.HomePage;
 import com.sqa.academy.utils.ConfigurationReader;
 import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.By;

@@ -1,6 +1,7 @@
 package com.sqa.academy.actions.SDETA55;
 
 import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.utils.ConfigurationReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
