@@ -1,4 +1,6 @@
 package com.sqa.academy.actions.SDETA3UserLogin;
 
-public class CheckSessionAfterPageReload {
+import com.sqa.academy.actions.Hooks;
+
+public class CheckSessionAfterPageReload extends Hooks {
 }

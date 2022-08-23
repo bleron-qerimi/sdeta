@@ -1,4 +1,6 @@
 package com.sqa.academy.actions.SDETA53PetViews;
 
-public class ClickToAddToCart {
+import com.sqa.academy.actions.Hooks;
+
+public class ClickToAddToCart extends Hooks {
 }

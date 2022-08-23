@@ -1,4 +1,6 @@
 package com.sqa.academy.actions.SDETA53PetViews;
 
-public class CheckPetViewReturnOption {
+import com.sqa.academy.actions.Hooks;
+
+public class CheckPetViewReturnOption extends Hooks {
 }

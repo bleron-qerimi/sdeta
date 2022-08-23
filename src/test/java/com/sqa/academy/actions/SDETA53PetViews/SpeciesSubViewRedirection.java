@@ -1,6 +1,8 @@
 package com.sqa.academy.actions.SDETA53PetViews;
 
-public class SpeciesSubViewRedirection {
+import com.sqa.academy.actions.Hooks;
+
+public class SpeciesSubViewRedirection extends Hooks {
 
 
 }

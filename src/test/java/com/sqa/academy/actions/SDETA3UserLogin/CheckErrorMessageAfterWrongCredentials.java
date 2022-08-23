@@ -1,4 +1,6 @@
 package com.sqa.academy.actions.SDETA3UserLogin;
 
-public class CheckErrorMessageAfterWrongCredentials {
+import com.sqa.academy.actions.Hooks;
+
+public class CheckErrorMessageAfterWrongCredentials extends Hooks {
 }

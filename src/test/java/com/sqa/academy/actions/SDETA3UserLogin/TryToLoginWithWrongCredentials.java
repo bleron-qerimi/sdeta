@@ -1,4 +1,6 @@
 package com.sqa.academy.actions.SDETA3UserLogin;
 
-public class TryToLoginWithWrongCredentials {
+import com.sqa.academy.actions.Hooks;
+
+public class TryToLoginWithWrongCredentials extends Hooks {
 }
