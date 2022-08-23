@@ -10,7 +10,7 @@ public class ClickToAddToCart extends Hooks {
 
     @Test
     public static void clickToAddToCart(){
-
+    //
         String url= ConfigurationReader.get("speciesSubView");
         driver.get(url);
 
