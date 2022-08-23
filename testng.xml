@@ -9,10 +9,10 @@
 <!--                </methods>-->
             </class>
 
-            <class name="com.sqa.academy.actions.SDETA55.SDETA57"></class>
-            <class name="com.sqa.academy.actions.SDETA55.SDETA60"></class>
-            <class name="com.sqa.academy.actions.SDETA55.SDETA62"></class>
-            <class name="com.sqa.academy.actions.SDETA55.SDETA69"></class>
+            <class name="com.sqa.academy.actions.SDETA43.ButtonAddNewComputer"></class>
+            <class name="com.sqa.academy.actions.SDETA43.FillTheForm"></class>
+            <class name="com.sqa.academy.actions.SDETA43.NewComputerCreated"></class>
+            <class name="com.sqa.academy.actions.SDETA43.RedirectToNewView"></class>
 
         </classes>
     </test>
