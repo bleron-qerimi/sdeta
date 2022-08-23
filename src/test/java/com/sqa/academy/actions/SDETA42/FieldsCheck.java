@@ -1,16 +1,11 @@
 package com.sqa.academy.actions.SDETA42;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.utils.ConfigurationReader;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class fieldsCheck extends Hooks {
+public class FieldsCheck extends Hooks {
     @Test
     public void fieldsCheck() throws Exception {
         String url = ConfigurationReader.get("url");
