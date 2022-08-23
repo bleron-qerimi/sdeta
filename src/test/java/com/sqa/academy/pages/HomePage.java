@@ -24,8 +24,11 @@ public class HomePage extends AbstractBasePage {
         logo.click();
     }
 
-    @FindBy(xpath = "//div[@id='SidebarContent']/a")
+    @FindBy(xpath = "//div[@id='SidebarContent']/a/img")
     public List<WebElement> leftSideMenu;
+    @FindBy(xpath = " //div[@id=\"QuickLinks\"]/a")
+    public List<WebElement> middleTopMenu;
+
 
 
 }
