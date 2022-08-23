@@ -1,29 +1,33 @@
 package com.sqa.academy.actions.SDETA43;
 
 import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.pages.computerDatabase.ComputerDatabaseElements;
 import com.sqa.academy.utils.ConfigurationReader;
+import io.netty.handler.codec.http.websocketx.extensions.WebSocketExtension;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.util.Objects;
 
 public class ComputerIsNotCreated extends Hooks {
     //computer is not stored, it is a bug
-    @Test
+
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public static void ComputerIsNotStored() {
         {
+            ComputerDatabaseElements elements = new ComputerDatabaseElements(driver);
             String url = ConfigurationReader.get("url");
             driver.get(url);
-            driver.findElement(By.id("searchbox")).sendKeys("HP");
-            driver.findElement(By.id("searchsubmit")).click();
-            driver.findElement(By.linkText("Introduced")).click();
-            WebElement search = driver.findElement(By.xpath("//*[@id=\"searchbox\"]"));
-            WebElement searchBtn = driver.findElement(By.xpath("//*[@id=\"searchsubmit\"]"));
+            WebElement searchBox= elements.search;
+            searchBox.sendKeys("HP");
+            WebElement searchBtn= elements.searchBtn;
             searchBtn.click();
-            if (!Objects.equals(search, "HP")) {
-                Assert.fail();
+            Assert.assertNotEquals(searchBox.getText(), "HP");
+            if (!Objects.equals(searchBox, "HP")) {
+                throw new IllegalArgumentException();
             }
         }
     }
