@@ -17,6 +17,20 @@
             <class name="com.sqa.academy.actions.SDETA55.ShoppingCartView"/>
 
 
+            <!-- Bleron first story test case classes-->
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.LoginWithCorrectCredentials"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.TryToLoginWithWrongCredentials"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckSessionAfterPageReload"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckUnexpiredSession"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckPromptAfterSessionExpiration"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckErrorMessageAfterWrongCredentials"></class>
+
+            <!-- Bleron second story test case classes  -->
+            <class name="com.sqa.academy.actions.SDETA53PetViews.SpeciesSubViewRedirection"></class>
+            <class name="com.sqa.academy.actions.SDETA53PetViews.CheckPetViewReturnOption"></class>
+            <class name="com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart"></class>
+            <class name="com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout"></class>
+
         </classes>
     </test>
 </suite>

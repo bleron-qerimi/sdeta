@@ -35,4 +35,12 @@ public class HomePage extends AbstractBasePage {
 
 
 
+    public WebElement getPet(String petName){
+        if(petName.equalsIgnoreCase("fish"))
+            return leftSideMenu.get(0);
+        else if (petName.equalsIgnoreCase("dog"))
+            return leftSideMenu.get(1);
+        else
+            return null;
+    }
 }
