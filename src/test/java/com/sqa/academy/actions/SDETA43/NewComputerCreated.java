@@ -15,8 +15,8 @@ public class NewComputerCreated extends Hooks {
     //new computer should be created
     @Test
     public static void ComputerCreated(){
-        String ComputerForm= ConfigurationReader.get("ComputerForm");
-        driver.get(ComputerForm);
+        String url2= ConfigurationReader.get("url2");
+        driver.get(url2);
         driver.findElement(By.id("name")).sendKeys("HP");
         driver.findElement(By.id("introduced")).sendKeys("2006-09-17");
         driver.findElement(By.id("discontinued")).sendKeys("2022-03-22");

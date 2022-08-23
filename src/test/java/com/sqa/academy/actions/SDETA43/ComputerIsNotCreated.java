@@ -13,10 +13,9 @@ public class ComputerIsNotCreated extends Hooks {
     //computer is not stored, it is a bug
     @Test
     public static void ComputerIsNotStored() {
-
         {
-            String computerHome = ConfigurationReader.get("computerHome");
-            driver.get(computerHome);
+            String url = ConfigurationReader.get("url");
+            driver.get(url);
             driver.findElement(By.id("searchbox")).sendKeys("HP");
             driver.findElement(By.id("searchsubmit")).click();
             driver.findElement(By.linkText("Introduced")).click();

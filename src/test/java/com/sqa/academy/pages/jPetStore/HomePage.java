@@ -19,6 +19,8 @@ public class HomePage extends AbstractBasePage {
         searchInput.sendKeys(searchTest);
         searchButton.click();
     }
+    @Override
+    public void shoppingCart(){shoppingCart.click();}
 
     @Override
     public void clicLogo() {
@@ -27,6 +29,10 @@ public class HomePage extends AbstractBasePage {
 
     @FindBy(xpath = "//div[@id='SidebarContent']/a")
     public List<WebElement> leftSideMenu;
+
+    @FindBy(xpath = "//td[5]/a")
+    public List<WebElement> addToCartProductView;
+
 
 
 }

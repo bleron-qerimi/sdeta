@@ -11,8 +11,8 @@ public class RedirectToNewView extends Hooks {
     public static void Redirect()
     //When click the Add new computer button, user should redirect to a new View.
     {
-        String computerHome = ConfigurationReader.get("computerHome");
-        driver.get(computerHome);
+        String url = ConfigurationReader.get("url");
+        driver.get(url);
        driver.findElement(By.id("add")).click();
     }
 }
