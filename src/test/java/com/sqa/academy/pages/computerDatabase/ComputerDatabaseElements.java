@@ -28,4 +28,24 @@ public  class ComputerDatabaseElements {
 
     @FindBy(xpath = "//*[@id=\"main\"]/table/thead/tr/th/a")
     public List<WebElement> arrangedButtons;
+
+    @FindBy(xpath = "//*[@id=\"main\"]/table/tbody/tr/td/a")
+    public List<WebElement> records;
+    @FindBy(xpath = "//td/a")
+    WebElement firstPage;
+    public void clickOnFirstPage(){
+        firstPage.click();
+    }
+    @FindBy(xpath = "//*[@id=\"main\"]/form[2]/input")
+    WebElement editView;
+
+    public void clickOnEditPage(){
+        editView.click();
+    }
+//    @FindBy(xpath = "//*[@id=\"main\"]/form[2]/input")
+//    WebElement editView;
+//
+//    public void nextBtn(){
+//        editView.click();
+//    }
 }
