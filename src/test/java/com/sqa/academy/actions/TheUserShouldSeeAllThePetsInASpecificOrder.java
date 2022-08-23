@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class TheUserShouldSeeAllThePetsInASpecificOrder extends Hooks{
 
     @Test
-    public void mainPage(){
+    public static void mainPage(){
 
 
         //Navigate to the main page

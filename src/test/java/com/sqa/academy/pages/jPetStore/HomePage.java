@@ -20,6 +20,7 @@ public class HomePage extends AbstractBasePage {
         searchButton.click();
     }
 
+
     @Override
     public void clicLogo() {
         logo.click();

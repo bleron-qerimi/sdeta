@@ -15,7 +15,8 @@ public abstract class AbstractBasePage {
 
     @FindBy(xpath = "somexpath")
     WebElement searchInput;
-
+    @FindBy(xpath = "//*[@id=\"MenuContent\"]/a[1]")
+    WebElement shoppingCart;
     @FindBy(xpath = "somexpath")
     WebElement searchButton;
 
