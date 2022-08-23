@@ -27,7 +27,6 @@ public class SignUpProcedurePetshop extends Hooks {
         Thread.sleep(1000);
         signingIn.click();
         Thread.sleep(1000);
-
         WebElement register=driver.findElement(By.xpath("//form/following-sibling::a"));
         Thread.sleep(1000);
         register.click();

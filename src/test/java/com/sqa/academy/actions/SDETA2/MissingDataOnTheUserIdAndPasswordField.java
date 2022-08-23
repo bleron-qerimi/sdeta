@@ -23,8 +23,5 @@ public class MissingDataOnTheUserIdAndPasswordField extends Hooks {
         Thread.sleep(1000);
         registerButton.click();
         Thread.sleep(2000);
-
-
-
     }
 }
