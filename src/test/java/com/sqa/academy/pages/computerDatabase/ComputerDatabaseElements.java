@@ -20,4 +20,8 @@ public abstract class ComputerDatabaseElements {
     public WebElement addDiscontinued;
     @FindBy(xpath = "//*[@id=\"company\"]")
     public WebElement selectCompany;
+    @FindBy(xpath = "//*[@id=\"searchbox\"]")
+    public WebElement search;
+    @FindBy(xpath = "//*[@id=\"searchsubmit\"]")
+    public WebElement searchBtn;
 }
