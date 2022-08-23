@@ -9,10 +9,13 @@
 <!--                </methods>-->
             </class>
 
-            <class name="com.sqa.academy.actions.SDETA55.SDETA57"></class>
-            <class name="com.sqa.academy.actions.SDETA55.SDETA60"></class>
-            <class name="com.sqa.academy.actions.SDETA55.SDETA62"></class>
-            <class name="com.sqa.academy.actions.SDETA55.SDETA69"></class>
+            <class name="com.sqa.academy.actions.SDETA55.AddingToCartFromItemView"/>
+            <class name="com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView"/>
+            <class name="com.sqa.academy.actions.SDETA55.CartRemoveButton"/>
+            <class name="com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser"/>
+            <class name="com.sqa.academy.actions.SDETA55.CartUpdateButton"/>
+            <class name="com.sqa.academy.actions.SDETA55.ShoppingCartView"/>
+
 
         </classes>
     </test>

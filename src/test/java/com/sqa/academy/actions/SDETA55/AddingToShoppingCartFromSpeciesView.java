@@ -1,6 +1,8 @@
 package com.sqa.academy.actions.SDETA55;
 
 import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.pages.HomePage;
+import com.sqa.academy.utils.ConfigurationReader;
 import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,10 +15,12 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
-public class SDETA60 extends Hooks {
+public class AddingToShoppingCartFromSpeciesView extends Hooks {
 
     @Test
-    public static void addToCart(){
+    public static void addToCart() {
+        String url = ConfigurationReader.get("url");
+        driver.get(url);
         List<WebElement> animalSpecies = driver.findElements(By.xpath("//*[@id=\"SidebarContent\"]/a"));
         int min = 1;
         int max = animalSpecies.size();
@@ -63,10 +67,7 @@ public class SDETA60 extends Hooks {
             WebElement animalProduct = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr["+birdsNumber+"]/td[1]/a"));
             animalProduct.click();
         }
-        WebElement animalItem = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr[2]/td[1]/a"));
-        animalItem.click();
-        WebElement animalToCart = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr[7]/td/a"));
+        WebElement animalToCart = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr[2]/td[5]/a"));
         animalToCart.click();
     }
 }
-
