@@ -8,10 +8,12 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.Random;
 
-public class SDETA57 extends Hooks {
+public class AddingToShoppingCartFromSpeciesView extends Hooks {
+
     @Test
     public static void addToCart() {
-
+        String url = ConfigurationReader.get("url");
+        driver.get(url);
         List<WebElement> animalSpecies = driver.findElements(By.xpath("//*[@id=\"SidebarContent\"]/a"));
         int min = 1;
         int max = animalSpecies.size();
