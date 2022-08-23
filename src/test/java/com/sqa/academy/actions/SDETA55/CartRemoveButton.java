@@ -70,8 +70,8 @@ public class CartRemoveButton extends Hooks {
 
         HomePage home = new HomePage(driver);
         home.clicLogo();
-        WebElement goShoppingCart = driver.findElement(By.xpath("//*[@id=\"MenuContent\"]/a[1]"));
-        goShoppingCart.click();
+        HomePage cart = new HomePage(driver);
+        cart.shoppingCart();
         WebElement animalRemove = driver.findElement(By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[2]/td[8]/a"));
         animalRemove.click();
     }
