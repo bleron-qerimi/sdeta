@@ -56,7 +56,8 @@ public class AddingToShoppingCartFromSpeciesView extends Hooks {
             int fishMax = fishies.fishProductIDLinks.size()+1;
             fishNumber = rand.nextInt(fishMax - fishMin + 1) + fishMin;
             fishies.fishProductIDLinks.get(fishNumber).click();
-        } else if (randomNum == 2) {
+        }
+        else if (randomNum == 2) {
             int dogsMin = 0;
             int dogsMax = doggos.dogProductIDLinks.size()+1;
             dogsNumber = rand.nextInt(dogsMax - dogsMin + 1) + dogsMin;
