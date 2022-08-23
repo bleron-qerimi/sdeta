@@ -1,4 +1,4 @@
-package com.sqa.academy.pages;
+package com.sqa.academy.pages.jPetStore;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
