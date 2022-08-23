@@ -37,6 +37,4 @@ public class HomePage extends AbstractBasePage {
         else
             return null;
     }
-
-
 }
