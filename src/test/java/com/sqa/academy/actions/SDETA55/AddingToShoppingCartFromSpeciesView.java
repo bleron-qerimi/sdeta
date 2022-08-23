@@ -1,24 +1,19 @@
 package com.sqa.academy.actions.SDETA55;
 
 import com.sqa.academy.actions.Hooks;
-import com.sqa.academy.pages.HomePage;
-import com.sqa.academy.utils.ConfigurationReader;
-import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
-public class SDETA57 extends Hooks {
+public class AddingToShoppingCartFromSpeciesView extends Hooks {
+
     @Test
     public static void addToCart() {
-
+        String url = ConfigurationReader.get("url");
+        driver.get(url);
         List<WebElement> animalSpecies = driver.findElements(By.xpath("//*[@id=\"SidebarContent\"]/a"));
         int min = 1;
         int max = animalSpecies.size();

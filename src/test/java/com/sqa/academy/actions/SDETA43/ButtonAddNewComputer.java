@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class ButtonAddNewComputer extends Hooks {
     //on the main page locate add new computer button
     @Test
-            public static void AddNewComp(){
+    public static void AddNewComp(){
         String url= ConfigurationReader.get("url");
         driver.get(url);
         String buttonAdd= driver.findElement(By.id("add")).getText();

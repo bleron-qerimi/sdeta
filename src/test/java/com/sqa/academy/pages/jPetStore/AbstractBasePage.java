@@ -1,4 +1,4 @@
-package com.sqa.academy.pages;
+package com.sqa.academy.pages.jPetStore;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ public abstract class AbstractBasePage {
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(xpath = "somexpath")
+    @FindBy(xpath = "//*[@id=\"LogoContent\"]/a/img")
     WebElement logo;
 
     @FindBy(xpath = "somexpath")

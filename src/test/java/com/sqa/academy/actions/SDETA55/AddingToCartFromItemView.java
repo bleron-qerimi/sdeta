@@ -1,11 +1,11 @@
 package com.sqa.academy.actions.SDETA55;
 
-
+import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.utils.ConfigurationReader;
 import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WindowType;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,26 +14,11 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
-public class SDETA69 {
-    static WebDriver driver = null;
-    static String url="https://petstore.octoperf.com/actions/Catalog.action";
-    @BeforeMethod
-    public void setUp(){
-        driver = Driver.getDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(url);
-    }
-    @AfterMethod
-    public void tearDown(){
-        driver.close();
-        driver.quit();
-    }
+public class AddingToCartFromItemView extends Hooks {
+
     @Test
-    public static void updateCart(){
-        String originalWindow = driver.getWindowHandle();
-        WebElement goShoppingCart = driver.findElement(By.xpath("//*[@id=\"MenuContent\"]/a[1]"));
-        goShoppingCart.click();
-        driver.switchTo().newWindow(WindowType.TAB);
+    public static void addToCart(){
+        String url = ConfigurationReader.get("url");
         driver.get(url);
         List<WebElement> animalSpecies = driver.findElements(By.xpath("//*[@id=\"SidebarContent\"]/a"));
         int min = 1;
@@ -81,10 +66,10 @@ public class SDETA69 {
             WebElement animalProduct = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr["+birdsNumber+"]/td[1]/a"));
             animalProduct.click();
         }
-        WebElement animalToCart = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr[2]/td[5]/a"));
+        WebElement animalItem = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr[2]/td[1]/a"));
+        animalItem.click();
+        WebElement animalToCart = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr[7]/td/a"));
         animalToCart.click();
-        driver.switchTo().window(originalWindow);
-        WebElement updateCart = driver.findElement(By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[3]/td[1]/input"));
-        updateCart.click();
     }
 }
+
