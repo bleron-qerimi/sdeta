@@ -13,9 +13,12 @@ public class HomePage {
     }
     @FindBy(xpath = "//div[@id='SidebarContent']/a")
     public List<WebElement> leftSideMenu;
-
+    @FindBy(xpath = "//*[@id=\"MenuContent\"]/a[1]")
+    public  WebElement shoppingCart;
     @FindBy(xpath = "//td[5]/a")
     public List<WebElement> addToCartProductView;
+    @FindBy(xpath = "//td/a")
+    public WebElement addToCartItemView;
     public WebElement getPet(String petName){
         if(petName.equalsIgnoreCase("fish"))
             return leftSideMenu.get(0);

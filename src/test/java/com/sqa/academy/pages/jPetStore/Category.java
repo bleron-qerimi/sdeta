@@ -24,6 +24,8 @@ public class Category {
 
     @FindBy(xpath = "//td/a")
     public List<WebElement> productLinks;
+    @FindBy(xpath = "//td/a[text()!=\"Add to Cart\"]")
+    public List<WebElement> itemLinks;
 
     public List<WebElement> productNames;
 
@@ -39,8 +41,6 @@ public class Category {
         return productLinks.get(index).getText();
 
     }
-
-
 
 
 }
