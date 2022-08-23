@@ -1,34 +1,21 @@
 package com.sqa.academy.actions.SDETA55;
 
 
-import com.sqa.academy.utils.Driver;
+import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.utils.ConfigurationReader;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 import java.util.Objects;
 
-public class SDETA62 {
-    static WebDriver driver = null;
-    static String url="https://petstore.octoperf.com/actions/Catalog.action";
-    @BeforeMethod
-    public void setUp(){
-        driver = Driver.getDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(url);
-    }
-    @AfterMethod
-    public void tearDown(){
-        driver.close();
-        driver.quit();
-    }
+public class ShoppingCartView extends Hooks {
+
+
     @Test
     public static void shoppingCartView(){
+        String url = ConfigurationReader.get("url");
+        driver.get(url);
         WebElement goToShoppingCart = driver.findElement(By.xpath("//*[@id=\"MenuContent\"]/a[1]"));
         goToShoppingCart.click();
         String tableRow1 = driver.findElement(By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[1]/th[1]")).getText();

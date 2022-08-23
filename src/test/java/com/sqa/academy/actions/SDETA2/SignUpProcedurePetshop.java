@@ -17,7 +17,7 @@ public class SignUpProcedurePetshop extends Hooks {
 
     @Test
     public  void signIn() throws Exception {
-        String url=ConfigurationReader.get("url");
+        String url=ConfigurationReader.get("url3");
         driver.get(url);
         WebElement enterStore=driver.findElement(By.xpath("//p/a"));
         Thread.sleep(1000);

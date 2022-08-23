@@ -1,6 +1,7 @@
 package com.sqa.academy.actions.SDETA2;
 
 import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.pages.WrongCredentialsPage;
 import com.sqa.academy.utils.ConfigurationReader;
 import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.By;
@@ -13,26 +14,18 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class TheUserHasAnExistingAccountAndTriesToSignUp extends Hooks {
+
+
+    WrongCredentialsPage objWrongCredentialPage;
     @Test
     public void wrongCredentials() throws Exception{
-        String url=ConfigurationReader.get("url2");
+        String url=ConfigurationReader.get("url4");
         driver.get(url);
-        WebElement userId= driver.findElement(By.name("username"));
-        WebElement passWord=driver.findElement(By.name("password"));
-        WebElement repeatPassword=driver.findElement(By.name("repeatedPassword"));
-        WebElement registerButton=driver.findElement(By.name("newAccount"));
 
-        Thread.sleep(1000);
-        userId.sendKeys("522");
-        passWord.sendKeys("Eron1234");
-        repeatPassword.sendKeys("Eron1234");
-        Thread.sleep(1000);
-        registerButton.click();
-        Thread.sleep(1000);
-
-
-
+        objWrongCredentialPage=new WrongCredentialsPage(driver);
+        objWrongCredentialPage.enterUsername("522");
+        objWrongCredentialPage.enterPassword("Eron1234");
+        objWrongCredentialPage.enterRepeatPassword("Eron1234");
+        objWrongCredentialPage.clickRegisterButton();
     }
-
-
 }
