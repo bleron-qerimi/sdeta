@@ -1,53 +1,74 @@
 package com.sqa.academy.pages.jPetStore;
 
+import com.sqa.academy.actions.Hooks;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class SignUpPage {
 
     WebDriver driver;
+// Go to sign in form
 
+    @FindBy(xpath = "//h2")
+    public WebElement enterTheStore;
     @FindBy(xpath = "//p/a")
-    WebElement enterStore;
+    public WebElement enterStore;
 
     @FindBy(xpath = "//div/a[2]")
-    WebElement logIn;
+    public WebElement logIn;
 
     @FindBy(xpath = "//form/following-sibling::a")
-    WebElement signInButton;
+    public WebElement signInButton;
 
-    public void goTosignInForm(){
-        enterStore.click();
-        logIn.click();
-        signInButton.click();
-    }
-
-
+    // wrong credentials on sign up form
     @FindBy(name="username")
-    WebElement userName;
+    public WebElement userName;
 
     @FindBy(name = "password")
-    WebElement password;
+    public WebElement password;
 
     @FindBy(name = "repeatedPassword")
-    WebElement repeatPassword;
+    public WebElement repeatPassword;
 
     @FindBy(name = "newAccount")
-    WebElement registerButton;
+    public WebElement registerButton;
 
+//  missing data to the required fields
 
-    @FindBy(name="newAccount")
-    WebElement register;
+    @FindBy(xpath = "//h3[1]")
+    public WebElement userInformation;
+
+    @FindBy(xpath = "//*[@id=\"Catalog\"]/form/table[1]/tbody/tr[1]/td[1]")
+    public WebElement userId;
+
+    @FindBy(xpath = "//*[@id=\"Catalog\"]/form/table[1]/tbody/tr[2]/td[1]")
+    public WebElement newPassword;
+
+    @FindBy(xpath = "//*[@id=\"Catalog\"]/form/table[1]/tbody/tr[3]/td[1]")
+    public WebElement rePassword;
+
+    @FindBy(name="username")
+    public WebElement userIdInput;
+
+    @FindBy(name = "password")
+    public WebElement newPasswordInput;
+
+    @FindBy(name = "repeatedPassword")
+    public WebElement rePasswordInput;
 
     public SignUpPage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }
-    public void clickOnSaveAccount(){
-        register.click();
-    }
+
 
 
     public void enterUsername(String arg1){
@@ -63,6 +84,20 @@ public class SignUpPage {
     }
 
     public void clickRegisterButton(){
-        repeatPassword.click();
+        registerButton.click();
     }
+    public void goTosignInForm(){
+        enterStore.click();
+        logIn.click();
+        signInButton.click();
+    }
+
+    public void clickAbleButton(){
+        WebElement element = driver.findElement(By.name("newAccount"));
+        if (element.isDisplayed() && element.isEnabled()) {
+            element.click();
+
+        }
+    }
+
 }

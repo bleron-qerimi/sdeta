@@ -3,11 +3,11 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/LabinotGjoka/IdeaProjects/sdeta">
         <classes>
-            <class name="com.sqa.academy.actions.TheUserShouldSeeAllThePetsInASpecificOrder">
-<!--                <methods>-->
-<!--                    <include name="petOrder"/>-->
-<!--                </methods>-->
-            </class>
+<!--            <class name="com.sqa.academy.actions.TheUserShouldSeeAllThePetsInASpecificOrder">-->
+<!--&lt;!&ndash;                <methods>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="petOrder"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                </methods>&ndash;&gt;-->
+<!--            </class>-->
 
             <class name="com.sqa.academy.actions.SDETA43.ButtonAddNewComputer"></class>
             <class name="com.sqa.academy.actions.SDETA43.FillTheForm"></class>
@@ -15,6 +15,11 @@
             <class name="com.sqa.academy.actions.SDETA43.RedirectToNewView"></class>
             <class name="com.sqa.academy.actions.SDETA43.NewComputerCreated"></class>
             <class name="com.sqa.academy.actions.SDETA43.NewComputerCreated"></class>
+            
+            <class name="com.sqa.academy.actions.SDETA2.SignUpProcedurePetshop"></class>
+            <class name="com.sqa.academy.actions.SDETA2.TheUserHasAnExistingAccountAndTriesToSignUp"></class>
+            <class name="com.sqa.academy.actions.SDETA2.MissingDataOnTheUserIdAndPasswordField"></class>
+
 
         </classes>
     </test>
