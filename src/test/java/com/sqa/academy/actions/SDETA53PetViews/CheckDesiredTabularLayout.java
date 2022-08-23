@@ -4,7 +4,7 @@ import com.sqa.academy.actions.GenerlSteps;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.Category;
 import com.sqa.academy.pages.jPetStore.HomePage;
-import com.sqa.academy.pages.jPetStore.SunCategory;
+import com.sqa.academy.pages.jPetStore.SubCategory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -28,8 +28,8 @@ public class CheckDesiredTabularLayout extends Hooks {
         // click on te Prodct
         String[] expectedResult = {"Item ID", "Product ID", "Description", "List Price"};
 
-        SunCategory sunCategory=new SunCategory();
-        String[] actualResult=sunCategory.getHeaders();
+        SubCategory subCategory =new SubCategory();
+        String[] actualResult= subCategory.getHeaders();
 
         for(int i=0;i<expectedResult.length;i++)
             Assert.assertEquals(expectedResult[i],actualResult[i]);
