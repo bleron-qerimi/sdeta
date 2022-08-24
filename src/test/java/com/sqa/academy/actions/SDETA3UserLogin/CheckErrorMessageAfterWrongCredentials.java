@@ -19,9 +19,9 @@ public class CheckErrorMessageAfterWrongCredentials extends Hooks {
         homePage.signInButtonHomePage.click();
 
         //assert we're on sign in page
-        Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Account.action?signonForm=");
+        Assert.assertTrue(driver.getCurrentUrl().contains("https://petstore.octoperf.com/actions/Account.action"));
 
-        SignInPage signInPage = new SignInPage();
+        SignInPage signInPage = new SignInPage(driver);
         signInPage.usernameInputField.sendKeys("notjohndoe");
         signInPage.passwordInputField.sendKeys("notjohndoe");
         signInPage.signInButtonSignInPage.click();

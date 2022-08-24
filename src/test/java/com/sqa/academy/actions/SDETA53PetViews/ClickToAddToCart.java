@@ -29,8 +29,8 @@ public class ClickToAddToCart extends Hooks {
         // click on the product
         category.clickOnProductIdLink(2);
 
-        SubCategory subCategory = new SubCategory();
-        subCategory.clickOnAddToCartButton(1);
+        SubCategory subCategory = new SubCategory(driver);
+        subCategory.clickOnAddToCartButton(0);
 
         //assert we're on add-to-cart page
         Assert.assertEquals("Shopping Cart", category.categoryName.getText());

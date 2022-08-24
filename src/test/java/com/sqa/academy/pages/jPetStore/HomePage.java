@@ -10,7 +10,7 @@ import java.util.List;
 
 public class HomePage extends AbstractBasePage {
     public HomePage(WebDriver driver){
-        super(driver);
+        super();
         PageFactory.initElements(driver, this);
     }
 

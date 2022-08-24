@@ -3,18 +3,18 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/LabinotGjoka/IdeaProjects/sdeta">
         <classes>
-            <class name="com.sqa.academy.actions.TheUserShouldSeeAllThePetsInASpecificOrder">
+
 <!--                <methods>-->
 <!--                    <include name="petOrder"/>-->
 <!--                </methods>-->
-            </class>
 
-            <class name="com.sqa.academy.actions.SDETA55.AddingToCartFromItemView"/>
-            <class name="com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView"/>
-            <class name="com.sqa.academy.actions.SDETA55.CartRemoveButton"/>
-            <class name="com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser"/>
-            <class name="com.sqa.academy.actions.SDETA55.CartUpdateButton"/>
-            <class name="com.sqa.academy.actions.SDETA55.ShoppingCartView"/>
+
+<!--            <class name="com.sqa.academy.actions.SDETA55.AddingToCartFromItemView"/>-->
+<!--            <class name="com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView"/>-->
+<!--            <class name="com.sqa.academy.actions.SDETA55.CartRemoveButton"/>-->
+<!--            <class name="com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser"/>-->
+<!--            <class name="com.sqa.academy.actions.SDETA55.CartUpdateButton"/>-->
+<!--            <class name="com.sqa.academy.actions.SDETA55.ShoppingCartView"/>-->
 
 
             <!-- Bleron first story test case classes-->

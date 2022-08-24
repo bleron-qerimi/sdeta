@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class CheckPetViewReturnOption extends Hooks {
 
     @Test
-    public static void checkReturnButtonAvailability() {
+    public static void checkReturnButtonAvailability() throws InterruptedException {
 
         //Go to env
         GeneralSteps.goToEnv("JPetStore");
@@ -26,11 +26,16 @@ public class CheckPetViewReturnOption extends Hooks {
         Category category=new Category(driver);
         Assert.assertEquals("Fish", category.categoryName.getText());
 
-        SubCategory subCategory=new SubCategory();
+        // click on the product ID
+        category.clickOnProductIdLink(2);
+        Thread.sleep(3000);
+
+        SubCategory subCategory=new SubCategory(driver);
         subCategory.clickOnReturnButton();
 
         //assert we're on fish category view
         Assert.assertEquals("Fish", category.categoryName.getText());
+
 
     }
 

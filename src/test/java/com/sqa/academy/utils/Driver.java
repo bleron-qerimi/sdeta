@@ -12,22 +12,25 @@ public class Driver {
     }
     public static WebDriver getDriver(){
         String browser=ConfigurationReader.get("browser");
-        switch (browser){
-            case "chrome":
-                WebDriverManager.chromedriver().setup();
-                driver=new ChromeDriver();
-                // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-                break;
-            case "fireFox":
-                WebDriverManager.firefoxdriver().setup();
-                driver=new FirefoxDriver();
-                //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-                break;
-            case "edge":
-                WebDriverManager.edgedriver().setup();
-                driver=new EdgeDriver();
-                //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-                break;
+        if(driver==null) {
+            switch (browser) {
+                case "fireFox":
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver();
+                    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    break;
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    break;
+
+                case "edge":
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+                    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    break;
+            }
         }
         return driver;
     }

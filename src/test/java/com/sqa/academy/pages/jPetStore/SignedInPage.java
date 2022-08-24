@@ -1,6 +1,7 @@
 package com.sqa.academy.pages.jPetStore;
 
 import com.sqa.academy.pages.jPetStore.AbstractBasePage;
+import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,13 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SignedInPage {
 
-    @FindBy(name = "username")
-    public WebElement usernameInputField;
+    public SignedInPage(WebDriver driver){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     @FindBy(xpath = "//*[@id='WelcomeContent']")
-    public static WebElement welcomeTextElement;
+    public WebElement welcomeTextElement;
 
-    public static String getWelcomeText(){
+    public String getWelcomeText(){
 
         String welcomeText = welcomeTextElement.getText();
 

@@ -1,6 +1,7 @@
 package com.sqa.academy.pages.jPetStore;
 
 import com.sqa.academy.pages.jPetStore.AbstractBasePage;
+import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SignInPage {
 
-    @FindBy(name = "username")
+    public SignInPage(WebDriver driver){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+    @FindBy(name="username")
     public WebElement usernameInputField;
 
     @FindBy(name = "password")
@@ -30,10 +35,10 @@ public class SignInPage {
         signInButtonSignInPage.click();
     }
 
-    @FindBy(xpath = "//*[@id=\"Content\"]/ul/li/text()")
-    public static WebElement loginFailedErrorMesage;
+    @FindBy(xpath = "//*[@id='Content']/ul/li")
+    public  WebElement loginFailedErrorMesage;
 
-    public static String getloginFailedErrorMesage(){
+    public  String getloginFailedErrorMesage(){
 
         String loginFailedErrorString = loginFailedErrorMesage.getText();
 

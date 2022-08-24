@@ -20,20 +20,22 @@ public class CheckSessionAfterPageReload extends Hooks {
         homePage.signInButtonHomePage.click();
 
         //assert we're on sign in page
-        Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Account.action?signonForm=");
+        Assert.assertTrue(driver.getCurrentUrl().contains("https://petstore.octoperf.com/actions/Account.action?signonForm="));
 
-        SignInPage signInPage = new SignInPage();
+        SignInPage signInPage = new SignInPage(driver);
         signInPage.usernameInputField.sendKeys("johndoe");
         signInPage.passwordInputField.sendKeys("johndoe");
         signInPage.signInButtonSignInPage.click();
 
+        SignedInPage signedInPage = new SignedInPage(driver);
+
         // assert we've logged in
-        Assert.assertEquals(SignedInPage.getWelcomeText(),"Welcome John!");
+        Assert.assertEquals(signedInPage.getWelcomeText(),"Welcome John!");
 
         // reload page to check session
         driver.navigate().refresh();
 
         //assert we are still logged in
-        Assert.assertEquals(SignedInPage.getWelcomeText(),"Welcome John!");
+        Assert.assertEquals(signedInPage.getWelcomeText(),"Welcome John!");
     }
 }
