@@ -1,22 +1,29 @@
 package com.sqa.academy.actions.SDETA52;
 
+import com.sqa.academy.actions.GenerlSteps;
 import com.sqa.academy.actions.Hooks;
-import com.sqa.academy.pages.jPetStore.SelectPetPage;
-import com.sqa.academy.utils.ConfigurationReader;
+import com.sqa.academy.pages.jPetStore.Category;
+import com.sqa.academy.pages.jPetStore.HomePage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SelectingAPet extends Hooks {
-    SelectPetPage objSelectPetPage;
+
 
 @Test
 public void SelectingPet () throws Exception {
-    String url= ConfigurationReader.get("url");
-    driver.get(url);
+    GenerlSteps.gotToEnv("JPetStore");
 
-    objSelectPetPage=new SelectPetPage(driver);
-    objSelectPetPage.clickPet();
+    HomePage homePage=new HomePage(driver);
+     homePage.getPet("fish").click();
+
+    Category category=new Category(driver);
+
+    category.clickOnProductIdLink(2);
 
 
-//heeeeej
+    Assert.assertTrue(driver.getCurrentUrl().contains("https://petstore.octoperf.com/actions/Catalog.action?viewProduc"));
+
 }
 }
+
