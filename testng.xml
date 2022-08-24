@@ -46,9 +46,17 @@
 
 
 
+
+
         </classes>
     </test>
     <test name="LabinotGjoka" preserve-order="true" verbose="2">
+        <classes><class name="com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder"></class>
+            <class name="com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderInTopCenterOfThePage"></class>
+            <class name="com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderOnCenterOfThePage"></class>
+        </classes>
+
+
 
     </test>
 </suite>
