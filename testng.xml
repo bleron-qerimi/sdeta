@@ -16,7 +16,6 @@
             <class name="com.sqa.academy.actions.SDETA55.CartUpdateButton"/>
             <class name="com.sqa.academy.actions.SDETA55.ShoppingCartView"/>
 
-
             <!-- Bleron first story test case classes-->
             <class name="com.sqa.academy.actions.SDETA3UserLogin.LoginWithCorrectCredentials"></class>
             <class name="com.sqa.academy.actions.SDETA3UserLogin.TryToLoginWithWrongCredentials"></class>
