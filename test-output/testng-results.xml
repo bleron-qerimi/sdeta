@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="20" passed="14" failed="6" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-24T14:44:04 EET" name="All Test Suite" finished-at="2022-08-24T14:44:50 EET" duration-ms="45446">
+    <groups>
+    </groups>
+    <test started-at="2022-08-24T14:44:04 EET" name="Hello" finished-at="2022-08-24T14:44:44 EET" duration-ms="40075">
+      <class name="com.sqa.academy.actions.SDETA43.RedirectToNewView">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA43.RedirectToNewView@78aab498]" started-at="2022-08-24T14:44:19 EET" name="setUp" finished-at="2022-08-24T14:44:20 EET" duration-ms="1138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Redirect()[pri:0, instance:com.sqa.academy.actions.SDETA43.RedirectToNewView@78aab498]" started-at="2022-08-24T14:44:20 EET" name="Redirect" finished-at="2022-08-24T14:44:21 EET" duration-ms="811" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/form/fieldset/div[1]/label"}
+  (Session info: chrome=104.0.5112.82)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'B524724', ip: '10.244.1.151', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c0cd69770de793379402ab843d4d24dc, findElement {using=xpath, value=//*[@id="main"]/form/fieldset/div[1]/label}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.82, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\LABINO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57250}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57250/devtoo..., se:cdpVersion: 104.0.5112.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c0cd69770de793379402ab843d4d24dc]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="main"]/form/fieldset/div[1]/label"}
+  (Session info: chrome=104.0.5112.82)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'B524724', ip: '10.244.1.151', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c0cd69770de793379402ab843d4d24dc, findElement {using=xpath, value=//*[@id="main"]/form/fieldset/div[1]/label}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.82, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\LABINO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57250}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57250/devtoo..., se:cdpVersion: 104.0.5112.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c0cd69770de793379402ab843d4d24dc
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy16.getText(Unknown Source)
+at com.sqa.academy.actions.SDETA43.RedirectToNewView.Redirect(RedirectToNewView.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Redirect -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA43.RedirectToNewView@78aab498]" started-at="2022-08-24T14:44:21 EET" name="tearDown" finished-at="2022-08-24T14:44:21 EET" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA43.RedirectToNewView -->
+      <class name="com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser@6ac13091]" started-at="2022-08-24T14:44:31 EET" name="setUp" finished-at="2022-08-24T14:44:33 EET" duration-ms="1119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addToCart()[pri:0, instance:com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser@6ac13091]" started-at="2022-08-24T14:44:33 EET" name="addToCart" finished-at="2022-08-24T14:44:33 EET" duration-ms="512" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[bound must be positive]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: bound must be positive
+at java.base/java.util.Random.nextInt(Random.java:321)
+at com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser.addToCart(ItemsInCartAfterClosingBrowser.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser@6ac13091]" started-at="2022-08-24T14:44:33 EET" name="tearDown" finished-at="2022-08-24T14:44:33 EET" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser -->
+      <class name="com.sqa.academy.actions.SDETA55.ShoppingCartView">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA55.ShoppingCartView@6d2a209c]" started-at="2022-08-24T14:44:36 EET" name="setUp" finished-at="2022-08-24T14:44:37 EET" duration-ms="1049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shoppingCartView()[pri:0, instance:com.sqa.academy.actions.SDETA55.ShoppingCartView@6d2a209c]" started-at="2022-08-24T14:44:37 EET" name="shoppingCartView" finished-at="2022-08-24T14:44:37 EET" duration-ms="354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shoppingCartView -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA55.ShoppingCartView@6d2a209c]" started-at="2022-08-24T14:44:37 EET" name="tearDown" finished-at="2022-08-24T14:44:38 EET" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA55.ShoppingCartView -->
+      <class name="com.sqa.academy.actions.SDETA55.CartRemoveButton">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA55.CartRemoveButton@48fa0f47]" started-at="2022-08-24T14:44:30 EET" name="setUp" finished-at="2022-08-24T14:44:31 EET" duration-ms="1120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeFromCart()[pri:0, instance:com.sqa.academy.actions.SDETA55.CartRemoveButton@48fa0f47]" started-at="2022-08-24T14:44:31 EET" name="removeFromCart" finished-at="2022-08-24T14:44:31 EET" duration-ms="12" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[bound must be positive]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: bound must be positive
+at java.base/java.util.Random.nextInt(Random.java:321)
+at com.sqa.academy.actions.SDETA55.CartRemoveButton.removeFromCart(CartRemoveButton.java:18)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeFromCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA55.CartRemoveButton@48fa0f47]" started-at="2022-08-24T14:44:31 EET" name="tearDown" finished-at="2022-08-24T14:44:31 EET" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA55.CartRemoveButton -->
+      <class name="com.sqa.academy.actions.SDETA43.FillTheForm">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA43.FillTheForm@647fd8ce]" started-at="2022-08-24T14:44:10 EET" name="setUp" finished-at="2022-08-24T14:44:11 EET" duration-ms="1112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="FillForm()[pri:0, instance:com.sqa.academy.actions.SDETA43.FillTheForm@647fd8ce]" started-at="2022-08-24T14:44:11 EET" name="FillForm" finished-at="2022-08-24T14:44:14 EET" duration-ms="3054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillForm -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA43.FillTheForm@647fd8ce]" started-at="2022-08-24T14:44:14 EET" name="tearDown" finished-at="2022-08-24T14:44:14 EET" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA43.FillTheForm -->
+      <class name="com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout@49c386c8]" started-at="2022-08-24T14:44:43 EET" name="setUp" finished-at="2022-08-24T14:44:44 EET" duration-ms="1199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkDesiredTabularLayout()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout@49c386c8]" started-at="2022-08-24T14:44:44 EET" name="checkDesiredTabularLayout" finished-at="2022-08-24T14:44:44 EET" duration-ms="502" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [null] but found [Item ID]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [null] but found [Item ID]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout.checkDesiredTabularLayout(CheckDesiredTabularLayout.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDesiredTabularLayout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout@49c386c8]" started-at="2022-08-24T14:44:44 EET" name="tearDown" finished-at="2022-08-24T14:44:44 EET" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout -->
+      <class name="com.sqa.academy.actions.SDETA43.ComputerIsNotCreated">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA43.ComputerIsNotCreated@5dd6264]" started-at="2022-08-24T14:44:21 EET" name="setUp" finished-at="2022-08-24T14:44:23 EET" duration-ms="1443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ComputerIsNotStored()[pri:0, instance:com.sqa.academy.actions.SDETA43.ComputerIsNotCreated@5dd6264]" started-at="2022-08-24T14:44:23 EET" name="ComputerIsNotStored" finished-at="2022-08-24T14:44:24 EET" duration-ms="1470" status="PASS">
+          <exception class="java.lang.IllegalArgumentException">
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException
+at com.sqa.academy.actions.SDETA43.ComputerIsNotCreated.ComputerIsNotStored(ComputerIsNotCreated.java:29)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComputerIsNotStored -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA43.ComputerIsNotCreated@5dd6264]" started-at="2022-08-24T14:44:24 EET" name="tearDown" finished-at="2022-08-24T14:44:24 EET" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA43.ComputerIsNotCreated -->
+      <class name="com.sqa.academy.actions.SDETA43.ButtonAddNewComputer">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA43.ButtonAddNewComputer@6193932a]" started-at="2022-08-24T14:44:08 EET" name="setUp" finished-at="2022-08-24T14:44:09 EET" duration-ms="999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AddNewComp()[pri:0, instance:com.sqa.academy.actions.SDETA43.ButtonAddNewComputer@6193932a]" started-at="2022-08-24T14:44:09 EET" name="AddNewComp" finished-at="2022-08-24T14:44:10 EET" duration-ms="860" status="PASS">
+          <exception class="java.lang.IllegalArgumentException">
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException
+at com.sqa.academy.actions.SDETA43.ButtonAddNewComputer.AddNewComp(ButtonAddNewComputer.java:20)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewComp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA43.ButtonAddNewComputer@6193932a]" started-at="2022-08-24T14:44:10 EET" name="tearDown" finished-at="2022-08-24T14:44:10 EET" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA43.ButtonAddNewComputer -->
+      <class name="com.sqa.academy.actions.SDETA55.AddingToCartFromItemView">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA55.AddingToCartFromItemView@7ee955a8]" started-at="2022-08-24T14:44:26 EET" name="setUp" finished-at="2022-08-24T14:44:27 EET" duration-ms="1109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addToCart()[pri:0, instance:com.sqa.academy.actions.SDETA55.AddingToCartFromItemView@7ee955a8]" started-at="2022-08-24T14:44:27 EET" name="addToCart" finished-at="2022-08-24T14:44:28 EET" duration-ms="835" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA55.AddingToCartFromItemView@7ee955a8]" started-at="2022-08-24T14:44:28 EET" name="tearDown" finished-at="2022-08-24T14:44:28 EET" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA55.AddingToCartFromItemView -->
+      <class name="com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart@1f0f1111]" started-at="2022-08-24T14:44:41 EET" name="setUp" finished-at="2022-08-24T14:44:42 EET" duration-ms="1150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clickToAddToCart()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart@1f0f1111]" started-at="2022-08-24T14:44:42 EET" name="clickToAddToCart" finished-at="2022-08-24T14:44:42 EET" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickToAddToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart@1f0f1111]" started-at="2022-08-24T14:44:42 EET" name="tearDown" finished-at="2022-08-24T14:44:43 EET" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart -->
+      <class name="com.sqa.academy.actions.SDETA54.RedirectToTheViewItemView">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA54.RedirectToTheViewItemView@1ffe63b9]" started-at="2022-08-24T14:44:24 EET" name="setUp" finished-at="2022-08-24T14:44:26 EET" duration-ms="1120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="RedirectToViewItemView()[pri:0, instance:com.sqa.academy.actions.SDETA54.RedirectToTheViewItemView@1ffe63b9]" started-at="2022-08-24T14:44:26 EET" name="RedirectToViewItemView" finished-at="2022-08-24T14:44:26 EET" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RedirectToViewItemView -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA54.RedirectToTheViewItemView@1ffe63b9]" started-at="2022-08-24T14:44:26 EET" name="tearDown" finished-at="2022-08-24T14:44:26 EET" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA54.RedirectToTheViewItemView -->
+      <class name="com.sqa.academy.actions.SDETA55.CartUpdateButton">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA55.CartUpdateButton@5e316c74]" started-at="2022-08-24T14:44:33 EET" name="setUp" finished-at="2022-08-24T14:44:35 EET" duration-ms="1490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="updateCart()[pri:0, instance:com.sqa.academy.actions.SDETA55.CartUpdateButton@5e316c74]" started-at="2022-08-24T14:44:35 EET" name="updateCart" finished-at="2022-08-24T14:44:36 EET" duration-ms="1099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA55.CartUpdateButton@5e316c74]" started-at="2022-08-24T14:44:36 EET" name="tearDown" finished-at="2022-08-24T14:44:36 EET" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA55.CartUpdateButton -->
+      <class name="com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder@12d4bf7e]" started-at="2022-08-24T14:44:04 EET" name="setUp" finished-at="2022-08-24T14:44:07 EET" duration-ms="2558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkOrderLeft()[pri:0, instance:com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder@12d4bf7e]" started-at="2022-08-24T14:44:07 EET" name="checkOrderLeft" finished-at="2022-08-24T14:44:08 EET" duration-ms="716" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOrderLeft -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder@12d4bf7e]" started-at="2022-08-24T14:44:08 EET" name="tearDown" finished-at="2022-08-24T14:44:08 EET" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder -->
+      <class name="com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView@1677d1]" started-at="2022-08-24T14:44:28 EET" name="setUp" finished-at="2022-08-24T14:44:29 EET" duration-ms="1459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addToCart()[pri:0, instance:com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView@1677d1]" started-at="2022-08-24T14:44:29 EET" name="addToCart" finished-at="2022-08-24T14:44:30 EET" duration-ms="620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView@1677d1]" started-at="2022-08-24T14:44:30 EET" name="tearDown" finished-at="2022-08-24T14:44:30 EET" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView -->
+      <class name="com.sqa.academy.actions.SDETA43.NewComputerCreated">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA43.NewComputerCreated@159f197]" started-at="2022-08-24T14:44:14 EET" name="setUp" finished-at="2022-08-24T14:44:16 EET" duration-ms="1432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ComputerCreated()[pri:0, instance:com.sqa.academy.actions.SDETA43.NewComputerCreated@159f197]" started-at="2022-08-24T14:44:16 EET" name="ComputerCreated" finished-at="2022-08-24T14:44:19 EET" duration-ms="3459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComputerCreated -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA43.NewComputerCreated@159f197]" started-at="2022-08-24T14:44:19 EET" name="tearDown" finished-at="2022-08-24T14:44:19 EET" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA43.NewComputerCreated -->
+      <class name="com.sqa.academy.actions.SDETA53PetViews.SpeciesSubViewRedirection">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.SpeciesSubViewRedirection@778d1062]" started-at="2022-08-24T14:44:38 EET" name="setUp" finished-at="2022-08-24T14:44:39 EET" duration-ms="1116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clickSpeciesProductID()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.SpeciesSubViewRedirection@778d1062]" started-at="2022-08-24T14:44:39 EET" name="clickSpeciesProductID" finished-at="2022-08-24T14:44:39 EET" duration-ms="320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSpeciesProductID -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.SpeciesSubViewRedirection@778d1062]" started-at="2022-08-24T14:44:39 EET" name="tearDown" finished-at="2022-08-24T14:44:39 EET" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA53PetViews.SpeciesSubViewRedirection -->
+      <class name="com.sqa.academy.actions.SDETA53PetViews.CheckPetViewReturnOption">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.CheckPetViewReturnOption@670002]" started-at="2022-08-24T14:44:39 EET" name="setUp" finished-at="2022-08-24T14:44:41 EET" duration-ms="1478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkReturnButtonAvailability()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.CheckPetViewReturnOption@670002]" started-at="2022-08-24T14:44:41 EET" name="checkReturnButtonAvailability" finished-at="2022-08-24T14:44:41 EET" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReturnButtonAvailability -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA53PetViews.CheckPetViewReturnOption@670002]" started-at="2022-08-24T14:44:41 EET" name="tearDown" finished-at="2022-08-24T14:44:41 EET" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA53PetViews.CheckPetViewReturnOption -->
+    </test> <!-- Hello -->
+    <test started-at="2022-08-24T14:44:44 EET" name="LabinotGjoka" finished-at="2022-08-24T14:44:50 EET" duration-ms="5346">
+      <class name="com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderInTopCenterOfThePage">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderInTopCenterOfThePage@2473d930]" started-at="2022-08-24T14:44:46 EET" name="setUp" finished-at="2022-08-24T14:44:48 EET" duration-ms="1405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkOrderTopMid()[pri:0, instance:com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderInTopCenterOfThePage@2473d930]" started-at="2022-08-24T14:44:48 EET" name="checkOrderTopMid" finished-at="2022-08-24T14:44:48 EET" duration-ms="405" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderInTopCenterOfThePage.checkOrderTopMid(VerifyingPetCategoryOrderInTopCenterOfThePage.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOrderTopMid -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderInTopCenterOfThePage@2473d930]" started-at="2022-08-24T14:44:48 EET" name="tearDown" finished-at="2022-08-24T14:44:48 EET" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderInTopCenterOfThePage -->
+      <class name="com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderOnCenterOfThePage">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderOnCenterOfThePage@35047d03]" started-at="2022-08-24T14:44:48 EET" name="setUp" finished-at="2022-08-24T14:44:49 EET" duration-ms="1087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkOrderTopMid()[pri:0, instance:com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderOnCenterOfThePage@35047d03]" started-at="2022-08-24T14:44:49 EET" name="checkOrderTopMid" finished-at="2022-08-24T14:44:50 EET" duration-ms="325" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderOnCenterOfThePage.checkOrderTopMid(VerifyingPetCategoryOrderOnCenterOfThePage.java:33)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOrderTopMid -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderOnCenterOfThePage@35047d03]" started-at="2022-08-24T14:44:50 EET" name="tearDown" finished-at="2022-08-24T14:44:50 EET" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderOnCenterOfThePage -->
+      <class name="com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder@76908cc0]" started-at="2022-08-24T14:44:44 EET" name="setUp" finished-at="2022-08-24T14:44:45 EET" duration-ms="1077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkOrderLeft()[pri:0, instance:com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder@76908cc0]" started-at="2022-08-24T14:44:45 EET" name="checkOrderLeft" finished-at="2022-08-24T14:44:46 EET" duration-ms="609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOrderLeft -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder@76908cc0]" started-at="2022-08-24T14:44:46 EET" name="tearDown" finished-at="2022-08-24T14:44:46 EET" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder -->
+    </test> <!-- LabinotGjoka -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
