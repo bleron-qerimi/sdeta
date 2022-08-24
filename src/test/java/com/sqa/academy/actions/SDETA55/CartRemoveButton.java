@@ -1,12 +1,15 @@
 package com.sqa.academy.actions.SDETA55;
 
 
+
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.*;
 import com.sqa.academy.utils.ConfigurationReader;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
 import java.util.List;
 import java.util.Random;
 
@@ -14,7 +17,7 @@ public class CartRemoveButton extends Hooks {
 
     @Test
     public static void removeFromCart(){
-        String url = ConfigurationReader.get("url");
+        String url = ConfigurationReader.get("url2");
         driver.get(url);
         List<WebElement> animaSpecies = driver.findElements(By.xpath("//*[@id=\"SidebarContent\"]/a"));
         int min = 1;
@@ -64,10 +67,8 @@ public class CartRemoveButton extends Hooks {
         }
         WebElement animalToCart = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr[2]/td[5]/a"));
         animalToCart.click();
-        WebElement backHome = driver.findElement(By.xpath("//*[@id=\"LogoContent\"]/a/img"));
-        backHome.click();
-        WebElement goShoppingCart = driver.findElement(By.xpath("//*[@id=\"MenuContent\"]/a[1]"));
-        goShoppingCart.click();
+
+
         WebElement animalRemove = driver.findElement(By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[2]/td[8]/a"));
         animalRemove.click();
     }

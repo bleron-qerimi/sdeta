@@ -1,6 +1,6 @@
 package com.sqa.academy.pages.jPetStore;
 
-public class SunCategory {
+public class SubCategory {
 
     public String[] getHeaders(){
         String[] str=new String[4];

@@ -8,15 +8,18 @@ import org.testng.annotations.Test;
 public class TheUserShouldSeeAllThePetsInASpecificOrder extends Hooks{
 
     @Test
-    public void mainPage(){
-
-
+    public static void mainPagePetStore(){
         //Navigate to the main page
         driver.get(ConfigurationReader.get("url2"));
 //        SoftAssert softAssert=new SoftAssert();
 //        softAssert.assertEquals();
         Assert.assertEquals(driver.getTitle(),"JPetStore Demo");
 
+    }
+    @Test
+    public static void mainPageComputerDataBase(){
+        driver.get(ConfigurationReader.get("url"));
+        Assert.assertEquals(driver.getTitle(),"Computer database");
     }
 
     @Test
