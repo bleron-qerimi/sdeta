@@ -15,7 +15,7 @@ public class VerifyingPetCategoryOrderInTopCenterOfThePage extends Hooks {
 
         HomePage basePage=new HomePage(driver);
 
-        String[] expectedOrder={"fish","dogs","reptiles","cats","birds"};
+        String[] expectedOrder={"fish","dogs","cats","reptiles","birds"};
 
         driver.get(ConfigurationReader.get("url2"));
         //{

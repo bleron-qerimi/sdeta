@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/LabinotGjoka/IdeaProjects/sdeta">
+    <test verbose="2" preserve-order="true" name="Hello">
         <classes>
             <class name="com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder">
 <!--                <methods>-->
@@ -15,5 +15,8 @@
             <class name="com.sqa.academy.actions.SDETA55.SDETA69"></class>
 
         </classes>
+    </test>
+    <test name="LabinotGjoka" preserve-order="true" verbose="2">
+
     </test>
 </suite>
