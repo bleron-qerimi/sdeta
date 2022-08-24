@@ -20,9 +20,9 @@ public class CheckTheOrderOfColumns extends Hooks {
         GeneralSteps.gotToEnv("Computer");
         ComputerDatabaseElements databaseElements=new ComputerDatabaseElements(driver);
         //The user should be able to see the columns listed as in the expected array
+        List<String> expected = Arrays.asList("Computer name", "Introduced", "Discontinued","Company");
         List<WebElement>arrangedButtons=databaseElements.arrangedButtons;
 
-        List<String> expected = Arrays.asList("Computer name", "Introduced", "Discontinued","Company");
         int i=0;
         for(WebElement row:arrangedButtons){
             Assert.assertEquals(row.getText(),expected.get(i));

@@ -18,23 +18,12 @@ public class PaginationButtonsForNav extends Hooks {
         //go to the enviornment
         GeneralSteps.gotToEnv("Computer");
         ComputerDatabaseElements databaseElements=new ComputerDatabaseElements(driver);
-
-        //check the pagination buttons if they are arranged on the right order
-        WebElement coordinates=driver.findElement(By.xpath("//*[@id=\"pagination\"]/ul"));
-        Point points=coordinates.getLocation();
+        //check the order of the buttons
+        Point points=databaseElements.paginBtn.getLocation();
         int x=points.getX();
 
-        System.out.println("Buttons are arranged under the table with these coordinates :"+x);
-
-
-        WebElement prevBtn =driver.findElement(By.xpath("//a[contains(text(), 'Previous')]"));
-
-        WebElement dispBtn =driver.findElement(By.xpath("//a[contains(text(), 'Displaying')]"));
-
-        WebElement nxtBtn =driver.findElement(By.xpath("//a[contains(text(), 'Next')]"));
-
-        Assert.assertTrue(nxtBtn.getLocation().getX()<dispBtn.getLocation().getX());
-        Assert.assertTrue(dispBtn.getLocation().getX()<prevBtn.getLocation().getX());
+        Assert.assertTrue(databaseElements.nxtBtn.getLocation().getX()<databaseElements.dispBtn.getLocation().getX());
+        Assert.assertTrue(databaseElements.dispBtn.getLocation().getX()<databaseElements.prevBtn.getLocation().getX());
 
    }
 }

@@ -77,6 +77,18 @@ public  class ComputerDatabaseElements {
     public WebElement companyTable;
     // end of fields check
 
+    //pagination buttons
+    @FindBy(xpath = "//*[@id=\"pagination\"]/ul")
+    public WebElement paginBtn;
+
+    @FindBy(xpath = "//a[contains(text(), 'Previous')]")
+    public  WebElement prevBtn;
+    @FindBy(xpath = "//a[contains(text(), 'Displaying')]")
+    public  WebElement dispBtn;
+    @FindBy(xpath = "//a[contains(text(), 'Next')]")
+    public  WebElement nxtBtn;
+    // end of it
+
     public void clickCmp(){
         clickCmp.click();
     }
@@ -89,5 +101,6 @@ public  class ComputerDatabaseElements {
         addIntroduced.clear();
         addIntroduced.sendKeys(arg1);
     }
+
 
 }
