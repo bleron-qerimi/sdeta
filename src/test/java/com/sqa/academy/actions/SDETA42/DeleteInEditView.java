@@ -1,17 +1,18 @@
 package com.sqa.academy.actions.SDETA42;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
-import com.sqa.academy.pages.EditViewPage;
-import com.sqa.academy.utils.ConfigurationReader;
+import com.sqa.academy.pages.computerDatabase.ComputerDatabaseElements;
 import org.testng.annotations.Test;
 
 public class DeleteInEditView extends Hooks{
 
-    EditViewPage objdeleteInEditViewPage;
+    ComputerDatabaseElements objdeleteInEditViewPage;
     @Test
-    public void X() throws Exception {
-        String url= ConfigurationReader.get("url");
-        driver.get(url);
-        objdeleteInEditViewPage= new EditViewPage(driver);
+    public void deletebtn() throws Exception {
+        GeneralSteps.gotToEnv("Computer");
+        ComputerDatabaseElements databaseElements=new ComputerDatabaseElements(driver);
+
+        objdeleteInEditViewPage= new ComputerDatabaseElements(driver);
         objdeleteInEditViewPage.clickOnFirstPage();
         objdeleteInEditViewPage.clickOnEditPage();
 

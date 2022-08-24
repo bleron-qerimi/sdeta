@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import java.util.Random;
 
-public class GenerlSteps extends Hooks {
+public class GeneralSteps extends Hooks {
 
     @Test
     public static void gotToEnv(String env){
@@ -29,7 +29,7 @@ public class GenerlSteps extends Hooks {
     }
 
     @Test
-    public void anPreconditon() {
+    public void anzPreconditon() {
         Random random=new Random();
         driver.get(pageintionUrl(random.nextInt(50)));
     }

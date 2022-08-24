@@ -1,5 +1,5 @@
 package com.sqa.academy.actions.SDETA44;
-import com.sqa.academy.actions.GenerlSteps;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
 
 
@@ -16,8 +16,10 @@ public class CheckTheOrderOfColumns extends Hooks {
 
     @Test
     public void checkTheOrderOfColumns() throws Exception{
-        GenerlSteps.gotToEnv("Computer");
+        //Navigate to the environment
+        GeneralSteps.gotToEnv("Computer");
         ComputerDatabaseElements databaseElements=new ComputerDatabaseElements(driver);
+        //The user should be able to see the columns listed as in the expected array
         List<WebElement>arrangedButtons=databaseElements.arrangedButtons;
 
         List<String> expected = Arrays.asList("Computer name", "Introduced", "Discontinued","Company");
