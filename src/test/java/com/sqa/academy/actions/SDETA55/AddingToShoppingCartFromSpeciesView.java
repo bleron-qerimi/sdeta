@@ -64,7 +64,5 @@ public class AddingToShoppingCartFromSpeciesView extends Hooks {
         WebElement animalToCart = driver.findElement(By.xpath("//*[@id=\"Catalog\"]/table/tbody/tr[2]/td[5]/a"));
         animalToCart.click();
 
-
-
     }
 }
