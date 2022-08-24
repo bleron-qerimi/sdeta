@@ -17,16 +17,6 @@ public class DeleteInEditView extends Hooks{
         objdeleteInEditViewPage.clickOnEditPage();
 
 
-//        WebElement firstPage=driver.findElement(By.xpath("//td/a"));
-//        Thread.sleep(1000);
-//        firstPage.click();
-//        Thread.sleep(1000);
-//
-//        WebElement editView=driver.findElement(By.xpath("//*[@id=\"main\"]/form[2]/input"));
-//        Thread.sleep(1000);
-//        editView.click();
-//        Thread.sleep(3000);
-
 
 
     }
