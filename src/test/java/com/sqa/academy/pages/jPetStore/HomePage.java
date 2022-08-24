@@ -13,6 +13,15 @@ public class HomePage {
     }
     @FindBy(xpath = "//div[@id='SidebarContent']/a")
     public List<WebElement> leftSideMenu;
+    @FindBy(xpath = "//area")
+    public List<WebElement> centerSideMenu;
+
+
+    @FindBy(xpath = "//div[@id='SidebarContent']/a/img")
+    public List<WebElement> leftSideMenuImg;
+    @FindBy(xpath = "//div[@id=\"QuickLinks\"]/a/img")
+    public List<WebElement> middleTopMenu;
+
     @FindBy(xpath = "//*[@id=\"MenuContent\"]/a[1]")
     public  WebElement shoppingCart;
     @FindBy(xpath = "//*/tr[3]/td/input")
