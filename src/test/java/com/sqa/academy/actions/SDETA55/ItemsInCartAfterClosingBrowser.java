@@ -1,7 +1,7 @@
 package com.sqa.academy.actions.SDETA55;
 
 
-import com.sqa.academy.actions.GenerlSteps;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.Category;
 import com.sqa.academy.pages.jPetStore.HomePage;
@@ -16,7 +16,7 @@ public class ItemsInCartAfterClosingBrowser extends Hooks {
 
     @Test
     public static void addToCart(){
-        GenerlSteps.gotToEnv("JPetStore");
+        GeneralSteps.gotToEnv("JPetStore");
         HomePage home = new HomePage(driver);
         ////Navigate to the ‘category view’ by clicking on the name at the left or top of the page, or on the picture of the desired animal.
         int max = home.leftSideMenu.size()-1;
@@ -39,7 +39,7 @@ public class ItemsInCartAfterClosingBrowser extends Hooks {
         driver.quit();
         driver = null;
         driver = new ChromeDriver();
-        GenerlSteps.gotToEnv("JPetStore");
+        GeneralSteps.gotToEnv("JPetStore");
         HomePage home1 = new HomePage(driver);
         home1.shoppingCart.click();
         WebElement cartUpdate = driver.findElement(By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[3]/td[1]/input"));

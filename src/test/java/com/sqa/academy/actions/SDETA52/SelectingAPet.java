@@ -1,6 +1,6 @@
 package com.sqa.academy.actions.SDETA52;
 
-import com.sqa.academy.actions.GenerlSteps;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.Category;
 import com.sqa.academy.pages.jPetStore.HomePage;
@@ -12,7 +12,7 @@ public class SelectingAPet extends Hooks {
 
 @Test
 public void SelectingPet () throws Exception {
-    GenerlSteps.gotToEnv("JPetStore");
+    GeneralSteps.gotToEnv("JPetStore");
 
     HomePage homePage=new HomePage(driver);
      homePage.getPet("fish").click();
