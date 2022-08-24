@@ -16,6 +16,27 @@ public class SignInPage {
     public WebElement passwordInputField;
 
     @FindBy(name = "signon")
-    public WebElement signInButton;
+    public WebElement signInButtonSignInPage;
 
+    public void enterUsername(String arg1){
+        usernameInputField.sendKeys(arg1);
+    }
+
+    public void enterPassword(String arg1){
+        passwordInputField.sendKeys(arg1);
+    }
+
+    public void signInButtonClick(){
+        signInButtonSignInPage.click();
+    }
+
+    @FindBy(xpath = "//*[@id=\"Content\"]/ul/li/text()")
+    public static WebElement loginFailedErrorMesage;
+
+    public static String getloginFailedErrorMesage(){
+
+        String loginFailedErrorString = loginFailedErrorMesage.getText();
+
+        return loginFailedErrorString;
+    }
 }

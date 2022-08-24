@@ -12,5 +12,15 @@ public class SignedInPage {
     @FindBy(name = "username")
     public WebElement usernameInputField;
 
+    @FindBy(xpath = "//*[@id='WelcomeContent']")
+    public static WebElement welcomeTextElement;
+
+    public static String getWelcomeText(){
+
+        String welcomeText = welcomeTextElement.getText();
+
+        return welcomeText;
+    }
+
 
 }

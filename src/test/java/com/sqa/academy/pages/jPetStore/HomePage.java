@@ -39,6 +39,6 @@ public class HomePage extends AbstractBasePage {
     }
 
     @FindBy(linkText = "Sign In")
-    public WebElement signInButton;
+    public WebElement signInButtonHomePage;
 
 }

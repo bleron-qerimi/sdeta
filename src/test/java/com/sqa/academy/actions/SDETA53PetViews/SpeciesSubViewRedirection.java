@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SpeciesSubViewRedirection extends Hooks {
+public class    SpeciesSubViewRedirection extends Hooks {
 
     @Test
     public static void clickSpeciesProductID(){
@@ -29,7 +29,7 @@ public class SpeciesSubViewRedirection extends Hooks {
         // click on the product
         category.clickOnProductIdLink(2);
 
-        //assert that we're on the subView page
+        //TODO - assert that we're on the subView page
 
 
     }

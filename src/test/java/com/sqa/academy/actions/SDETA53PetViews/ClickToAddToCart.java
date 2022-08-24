@@ -33,7 +33,7 @@ public class ClickToAddToCart extends Hooks {
         subCategory.clickOnAddToCartButton(1);
 
         //assert we're on add-to-cart page
-
+        Assert.assertEquals("Shopping Cart", category.categoryName.getText());
 
     }
 }

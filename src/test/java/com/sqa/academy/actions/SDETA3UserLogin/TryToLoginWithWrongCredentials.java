@@ -4,6 +4,7 @@ import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.HomePage;
 import com.sqa.academy.pages.jPetStore.SignInPage;
+import org.testng.Assert;
 
 import static org.openqa.selenium.Keys.ENTER;
 
@@ -13,15 +14,16 @@ public class TryToLoginWithWrongCredentials extends Hooks {
         //Go to env
         GeneralSteps.goToEnv("JPetStore");
         HomePage homePage = new HomePage(driver);
-        homePage.signInButton.click();
+        homePage.signInButtonHomePage.click();
 
-        //TODO - assert we're on sign in page
+        Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Account.action?signonForm=");
 
         SignInPage signInPage = new SignInPage();
         signInPage.usernameInputField.sendKeys("notjohndoe");
         signInPage.passwordInputField.sendKeys("notjohndoe");
-        signInPage.signInButton.sendKeys(ENTER);
+        signInPage.signInButtonSignInPage.click();
 
-        //TODO - assert we're on the same page
+        //assert we're on the same page
+        Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Account.action?signonForm=");
     }
 }
