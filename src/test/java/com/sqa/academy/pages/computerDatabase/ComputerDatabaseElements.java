@@ -54,10 +54,53 @@ public  class ComputerDatabaseElements {
     public void clickOnEditPage(){
         editView.click();
     }
-//    @FindBy(xpath = "//*[@id=\"main\"]/form[2]/input")
-//    WebElement editView;
-//
-//    public void nextBtn(){
-//        editView.click();
-//    }
+    @FindBy(xpath = "//*[@id=\"main\"]/form[1]/div/input")
+    WebElement saveBtn;
+
+    public void svBtn(){
+        saveBtn.click();
+    }
+    @FindBy(xpath = "//td/a")
+    public WebElement clickCmp;
+
+    // fields check
+    @FindBy(xpath = "//a[text()='Computer name']")
+    public WebElement compNameTable;
+
+    @FindBy(xpath = "//a[text()='Introduced']")
+    public WebElement introducedTable;
+
+    @FindBy(xpath = "//a[text()='Discontinued']")
+    public WebElement discontedTable;
+
+    @FindBy(xpath = "//a[text()='Company']")
+    public WebElement companyTable;
+    // end of fields check
+
+    //pagination buttons
+    @FindBy(xpath = "//*[@id=\"pagination\"]/ul")
+    public WebElement paginBtn;
+
+    @FindBy(xpath = "//a[contains(text(), 'Previous')]")
+    public  WebElement prevBtn;
+    @FindBy(xpath = "//a[contains(text(), 'Displaying')]")
+    public  WebElement dispBtn;
+    @FindBy(xpath = "//a[contains(text(), 'Next')]")
+    public  WebElement nxtBtn;
+    // end of it
+
+    public void clickCmp(){
+        clickCmp.click();
+    }
+
+    public void addName(String arg1){
+        addName.clear();
+        addName.sendKeys(arg1);
+    }
+    public void addIntroduced(String arg1){
+        addIntroduced.clear();
+        addIntroduced.sendKeys(arg1);
+    }
+
+
 }

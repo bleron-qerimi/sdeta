@@ -39,7 +39,7 @@ public class ItemsInCartAfterClosingBrowser extends Hooks {
         driver.quit();
         driver = null;
         driver = new ChromeDriver();
-       GeneralSteps.gotToEnv("JPetStore");
+        GeneralSteps.gotToEnv("JPetStore");
         HomePage home1 = new HomePage(driver);
         home1.shoppingCart.click();
         WebElement cartUpdate = driver.findElement(By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[3]/td[1]/input"));
