@@ -8,7 +8,21 @@
 <!--                    <include name="petOrder"/>-->
 <!--                </methods>-->
             </class>
+            <!-- Jasmina User Story SDETA43- User should be able to create new computer-->
+            <class name="com.sqa.academy.actions.SDETA43.ButtonAddNewComputer"></class>
+            <class name="com.sqa.academy.actions.SDETA43.FillTheForm"></class>
+            <class name="com.sqa.academy.actions.SDETA43.NewComputerCreated"></class>
+            <class name="com.sqa.academy.actions.SDETA43.RedirectToNewView"></class>
+            <class name="com.sqa.academy.actions.SDETA43.NewComputerCreated"></class>
+            <class name="com.sqa.academy.actions.SDETA43.ComputerIsNotCreated"></class>
 
+            <!-- Jasmina User Story SDETA54- User should see the details of the Pet-->
+            <class name="com.sqa.academy.actions.SDETA54.RedirectToTheViewItemView"></class>
+            <class name="com.sqa.academy.actions.SDETA54.ReturnToSubspeciesView"></class>
+            <class name="com.sqa.academy.actions.SDETA54.UserShouldSeeTheDetails"></class>
+            <class name="com.sqa.academy.actions.SDETA54.AddPetToTheCard"></class>
+
+            <!-- Muhamed User Story SDETA55-->
             <class name="com.sqa.academy.actions.SDETA55.AddingToCartFromItemView"/>
             <class name="com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView"/>
             <class name="com.sqa.academy.actions.SDETA55.CartRemoveButton"/>
