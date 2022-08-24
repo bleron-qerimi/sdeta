@@ -6,6 +6,7 @@ import com.sqa.academy.utils.ConfigurationReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -14,22 +15,15 @@ public class PaginationButtonsForNav extends Hooks {
 
     @Test
     public void getCoordinates() throws Exception {
+        //go to the enviornment
         GeneralSteps.gotToEnv("Computer");
         ComputerDatabaseElements databaseElements=new ComputerDatabaseElements(driver);
-
-
-        WebElement coordinates=driver.findElement(By.xpath("//*[@id=\"pagination\"]/ul"));
-        Point points=coordinates.getLocation();
+        //check the order of the buttons
+        Point points=databaseElements.paginBtn.getLocation();
         int x=points.getX();
-        int y=points.getY();
-        System.out.println("Buttons are arranged under the table with these coordinates :"+x+", "+y);
 
+        Assert.assertTrue(databaseElements.nxtBtn.getLocation().getX()<databaseElements.dispBtn.getLocation().getX());
+        Assert.assertTrue(databaseElements.dispBtn.getLocation().getX()<databaseElements.prevBtn.getLocation().getX());
 
-        List<WebElement> arrangedButtons=driver.findElements(By.xpath("//*[@id=\"pagination\"]/ul/li/a"));
-        System.out.println("Buttons arranged from left to right: "+arrangedButtons.size());
-
-        for(WebElement row:arrangedButtons){
-            System.out.println("Button: "+row.getText());
-        }
-    }
+   }
 }

@@ -21,9 +21,5 @@ public class LimitOfRecordsOnTheTable extends Hooks {
         List<WebElement>records=databaseElements.records;
 
         Assert.assertEquals(records.size(),10);
-
-
-
-
     }
 }

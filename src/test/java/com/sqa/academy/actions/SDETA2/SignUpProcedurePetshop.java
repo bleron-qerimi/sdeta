@@ -24,7 +24,7 @@ public class SignUpProcedurePetshop extends Hooks {
         Assert.assertEquals(objSignUpPage.enterStore.getText(),"Enter the Store");
 
         objSignUpPage.goTosignInForm();
-        Assert.assertEquals(objHomePage.signInButton.getText(),"Sign In");
+
         Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Account.action?newAccountForm=");
 
 
