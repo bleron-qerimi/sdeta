@@ -1,6 +1,6 @@
 package com.sqa.academy.actions.SDETA53PetViews;
 
-import com.sqa.academy.actions.GenerlSteps;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.Category;
 import com.sqa.academy.pages.jPetStore.HomePage;
@@ -15,7 +15,7 @@ public class CheckDesiredTabularLayout extends Hooks {
     public static void checkDesiredTabularLayout(){
 
         //Go to env
-        GenerlSteps.gotToEnv("JPetStore");
+        GeneralSteps.gotToEnv("JPetStore");
         // Click on a pet  from homePage
         HomePage hp=new HomePage(driver);
 

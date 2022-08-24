@@ -1,30 +1,30 @@
 package com.sqa.academy.actions.SDETA44;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.pages.computerDatabase.ComputerDatabaseElements;
 import com.sqa.academy.utils.ConfigurationReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
 public class NavigateNextButton extends Hooks {
 
+    ComputerDatabaseElements objdeleteInEditViewPage;
     @Test
-    public void getCoordinates() throws Exception {
-        String url= ConfigurationReader.get("url");
-        driver.get(url);
-        Thread.sleep(1000);
+    public void recordsOnSecondPage() throws Exception {
+        GeneralSteps.gotToEnv("Computer");
+        ComputerDatabaseElements databaseElements=new ComputerDatabaseElements(driver);
 
-        WebElement nextButton=driver.findElement(By.xpath("//*[@id=\"pagination\"]/ul/li[3]/a"));
-        Thread.sleep(1000);
-        nextButton.click();
-        Thread.sleep(1000);
+        objdeleteInEditViewPage= new ComputerDatabaseElements(driver);
+        objdeleteInEditViewPage.clickOnFirstPage();
+//        objdeleteInEditViewPage.nextBtn();
 
-        List<WebElement> rowsLim=driver.findElements(By.xpath("//*[@id=\"main\"]/table/tbody/tr/td/a"));
-        System.out.println("Nr of rows on the second page of the table "+rowsLim.size());
+        List<WebElement>records=databaseElements.records;
 
-        for(WebElement row:rowsLim){
-            System.out.println("Computer name: "+row.getText());
-        }
+        Assert.assertEquals(records.size(),10);
+
     }
 }

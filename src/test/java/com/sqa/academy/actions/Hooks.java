@@ -24,6 +24,5 @@ public class Hooks {
         Driver.close();
         driver=null;
     }
-
     }
 }
