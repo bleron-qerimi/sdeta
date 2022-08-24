@@ -14,7 +14,6 @@ public class TheUserHasAnExistingAccountAndTriesToSignUp extends Hooks {
     public void wrongCredentials() throws Exception{
         String url=ConfigurationReader.get("petstoreurl1");
         driver.get(url);
-
         objSignUpPage=new SignUpPage(driver);
         objSignUpPage.clickAbleButton();
         //Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Account.action?newAccountForm=");
@@ -28,10 +27,7 @@ public class TheUserHasAnExistingAccountAndTriesToSignUp extends Hooks {
         objSignUpPage.enterUsername("522");
         objSignUpPage.enterPassword("Eron1234");
         objSignUpPage.enterRepeatPassword("Eron1234");
-
         objSignUpPage.clickRegisterButton();
-
-
         Assert.assertEquals(driver.getCurrentUrl(), "https://petstore.octoperf.com/actions/Account.action?newAccountF");
     }
 }
