@@ -15,8 +15,14 @@ public class HomePage {
     public List<WebElement> leftSideMenu;
     @FindBy(xpath = "//*[@id=\"MenuContent\"]/a[1]")
     public  WebElement shoppingCart;
+    @FindBy(xpath = "//*/tr[3]/td/input")
+    public WebElement updateCart;
+    @FindBy(xpath = "//*/a[text()=\"Remove\"]")
+    public List<WebElement> removeFromCart;
     @FindBy(xpath = "//td[5]/a")
     public List<WebElement> addToCartProductView;
+    @FindBy(xpath = "//*[@id=\"LogoContent\"]/a")
+    public WebElement backHome;
     @FindBy(xpath = "//td/a")
     public WebElement addToCartItemView;
     public WebElement getPet(String petName){

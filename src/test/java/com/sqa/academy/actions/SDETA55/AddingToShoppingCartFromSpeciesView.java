@@ -5,12 +5,8 @@ import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-
 import java.util.Random;
-
 public class AddingToShoppingCartFromSpeciesView extends Hooks {
-
     @Test
     public static void addToCart(){
         GenerlPetStore.gotToEnv("JPetStore");

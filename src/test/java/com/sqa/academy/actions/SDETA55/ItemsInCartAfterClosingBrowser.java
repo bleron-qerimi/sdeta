@@ -5,17 +5,11 @@ import com.sqa.academy.actions.GenerlPetStore;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.Category;
 import com.sqa.academy.pages.jPetStore.HomePage;
-import com.sqa.academy.utils.ConfigurationReader;
-import com.sqa.academy.utils.Driver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-
-import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 public class ItemsInCartAfterClosingBrowser extends Hooks {
@@ -54,8 +48,7 @@ public class ItemsInCartAfterClosingBrowser extends Hooks {
         if (Objects.equals(cartEmptyCheck, "Your cart is empty.")) {
             Assert.fail();
         }
-        WebElement backHome = driver.findElement(By.xpath("//*[@id=\"LogoContent\"]/a/img"));
-        backHome.click();
+        home1.backHome.click();
         ////Navigate to the ‘category view’ by clicking on the name at the left or top of the page, or on the picture of the desired animal.
         int max1 = home1.leftSideMenu.size()-1;
         Random rand1 = new Random();
@@ -69,7 +62,7 @@ public class ItemsInCartAfterClosingBrowser extends Hooks {
         int animalMax1 = animalsies1.productLinks.size()-1;
         int animalNumber1 = rand.nextInt(animalMax1);
         animalsies.productLinks.get(animalNumber1).click();
-        //Click on the add to cart button
+        //Click on the add to cart button of the desired animal
         HomePage addToCart1 = new HomePage(driver);
         int maxProduct1 = addToCart1.addToCartProductView.size()-1;
         int addToCartOption1 = rand1.nextInt(maxProduct1);
