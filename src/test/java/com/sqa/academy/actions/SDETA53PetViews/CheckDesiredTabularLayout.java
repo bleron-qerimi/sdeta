@@ -1,18 +1,12 @@
 package com.sqa.academy.actions.SDETA53PetViews;
 
-import com.sqa.academy.actions.GenerlPetStore;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.Category;
 import com.sqa.academy.pages.jPetStore.HomePage;
-import com.sqa.academy.pages.jPetStore.SunCategory;
-import com.sqa.academy.utils.ConfigurationReader;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import com.sqa.academy.pages.jPetStore.SubCategory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CheckDesiredTabularLayout extends Hooks {
 
@@ -21,32 +15,27 @@ public class CheckDesiredTabularLayout extends Hooks {
     public static void checkDesiredTabularLayout(){
 
         //Go to env
-        GenerlPetStore.gotToEnv("JPetStore");
+        GeneralSteps.goToEnv("JPetStore");
         // Click on a pet  from homePage
         HomePage hp=new HomePage(driver);
-
         hp.getPet("fish").click();
+
+        //assert we're on fish category view
         Category category=new Category(driver);
         Assert.assertEquals("Fish", category.categoryName.getText());
 
-       String productId= category.clickOnProductIdLink(2);
 
-        // click on te Prodct
-        String[] expectedResult = {"Item ID", "Product ID", "Description", "List Price"};
+        // click on the product
+        category.clickOnProductIdLink(2);
 
-        SunCategory sunCategory=new SunCategory();
-        String[] actualResult=sunCategory.getHeaders();
+        String[] expectedHeaders = {"Item ID", "Product ID", "Description", "List Price"};
 
-        for(int i=0;i<expectedResult.length;i++)
-            Assert.assertEquals(expectedResult[i],actualResult[i]);
+        SubCategory subCategory=new SubCategory();
+        String[] actualHeaders=subCategory.getHeaders();
 
-
-
-
-
-
-
+        for(int i=0;i<expectedHeaders.length;i++) {
+            Assert.assertEquals(expectedHeaders[i], actualHeaders[i]);
+        }
     }
-
 
 }
