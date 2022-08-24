@@ -1,5 +1,7 @@
 package com.sqa.academy.actions.SDETA44;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
+import com.sqa.academy.pages.computerDatabase.ComputerDatabaseElements;
 import com.sqa.academy.utils.ConfigurationReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
@@ -12,9 +14,9 @@ public class PaginationButtonsForNav extends Hooks {
 
     @Test
     public void getCoordinates() throws Exception {
-        String url= ConfigurationReader.get("url");
-        driver.get(url);
-        Thread.sleep(1000);
+        GeneralSteps.gotToEnv("Computer");
+        ComputerDatabaseElements databaseElements=new ComputerDatabaseElements(driver);
+
 
         WebElement coordinates=driver.findElement(By.xpath("//*[@id=\"pagination\"]/ul"));
         Point points=coordinates.getLocation();

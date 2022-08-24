@@ -1,6 +1,7 @@
 package com.sqa.academy.actions.SDETA42;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
-import com.sqa.academy.pages.EditViewPage;
+import com.sqa.academy.pages.computerDatabase.ComputerDatabaseElements;
 import com.sqa.academy.utils.ConfigurationReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,8 +12,8 @@ public class CancelInEditView extends Hooks{
    // EditViewPage objcancelInEditViewPage;
     @Test
     public void editsInEditView() throws Exception {
-        String url= ConfigurationReader.get("url");
-        driver.get(url);
+        GeneralSteps.gotToEnv("Computer");
+        ComputerDatabaseElements databaseElements = new ComputerDatabaseElements(driver);
 
         WebElement firstPage=driver.findElement(By.xpath("//td/a"));
         firstPage.click();
@@ -28,6 +29,5 @@ public class CancelInEditView extends Hooks{
         WebElement cancelButton=driver.findElement(By.xpath("//*[@id=\"main\"]/form[1]/div/a"));
         cancelButton.click();
 
-        //    Assert.assertEquals(tableForm3.getText(),expectedTable3);
     }
 }
