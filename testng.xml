@@ -22,6 +22,13 @@
             <class name="com.sqa.academy.actions.SDETA54.UserShouldSeeTheDetails"></class>
             <class name="com.sqa.academy.actions.SDETA54.AddPetToTheCard"></class>
 
+            <!-- Muhamed User Story SDETA55-->
+            <class name="com.sqa.academy.actions.SDETA55.AddingToCartFromItemView"/>
+            <class name="com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView"/>
+            <class name="com.sqa.academy.actions.SDETA55.CartRemoveButton"/>
+            <class name="com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser"/>
+            <class name="com.sqa.academy.actions.SDETA55.CartUpdateButton"/>
+            <class name="com.sqa.academy.actions.SDETA55.ShoppingCartView"/>
 
             <!-- Bleron first story test case classes-->
             <class name="com.sqa.academy.actions.SDETA3UserLogin.LoginWithCorrectCredentials"></class>
