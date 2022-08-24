@@ -7,15 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class SignInPage {
+public class SignedInPage {
 
     @FindBy(name = "username")
     public WebElement usernameInputField;
 
-    @FindBy(name = "password")
-    public WebElement passwordInputField;
-
-    @FindBy(name = "signon")
-    public WebElement signInButton;
 
 }
