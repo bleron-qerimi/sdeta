@@ -44,6 +44,8 @@
             <class name="com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart"></class>
             <class name="com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout"></class>
 
+
+
         </classes>
     </test>
     <test name="LabinotGjoka" preserve-order="true" verbose="2">

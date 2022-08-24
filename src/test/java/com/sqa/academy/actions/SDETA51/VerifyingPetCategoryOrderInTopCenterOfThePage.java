@@ -1,7 +1,7 @@
 package com.sqa.academy.actions.SDETA51;
 
 import com.sqa.academy.actions.Hooks;
-import com.sqa.academy.pages.HomePage;
+import com.sqa.academy.pages.jPetStore.HomePage;
 import com.sqa.academy.utils.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;

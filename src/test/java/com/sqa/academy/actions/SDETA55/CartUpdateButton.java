@@ -1,6 +1,6 @@
 package com.sqa.academy.actions.SDETA55;
 
-import com.sqa.academy.actions.GenerlSteps;
+import com.sqa.academy.actions.GeneralSteps;
 import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.Category;
 import com.sqa.academy.pages.jPetStore.HomePage;
@@ -13,13 +13,14 @@ public class CartUpdateButton extends Hooks {
 
     @Test
     public static void updateCart(){
-        GenerlSteps.gotToEnv("JPetStore");
+        GeneralSteps.gotToEnv("JPetStore");
         HomePage home = new HomePage(driver);
         //Open the shopping cart and switch to new tab
         String originalWindow = driver.getWindowHandle();
         home.shoppingCart.click();
         driver.switchTo().newWindow(WindowType.TAB);
-        GenerlSteps.gotToEnv("JPetStore");
+
+        GeneralSteps.gotToEnv("JPetStore");
         ////Navigate to the ‘category view’ by clicking on the name at the left or top of the page, or on the picture of the desired animal.
         int max = home.leftSideMenu.size() - 1;
         Random rand = new Random();
