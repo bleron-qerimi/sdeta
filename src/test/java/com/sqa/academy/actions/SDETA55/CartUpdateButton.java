@@ -19,7 +19,6 @@ public class CartUpdateButton extends Hooks {
         String originalWindow = driver.getWindowHandle();
         home.shoppingCart.click();
         driver.switchTo().newWindow(WindowType.TAB);
-
         GeneralSteps.gotToEnv("JPetStore");
         ////Navigate to the ‘category view’ by clicking on the name at the left or top of the page, or on the picture of the desired animal.
         int max = home.leftSideMenu.size() - 1;
