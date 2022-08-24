@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/LabinotGjoka/IdeaProjects/sdeta">
         <classes>
-            <class name="com.sqa.academy.actions.TheUserShouldSeeAllThePetsInASpecificOrder">
+            <class name="com.sqa.academy.actions.SDETA51.TheUserShouldSeeAllThePetsInASpecificOrder">
 <!--                <methods>-->
 <!--                    <include name="petOrder"/>-->
 <!--                </methods>-->
