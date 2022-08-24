@@ -12,14 +12,16 @@ public abstract class AbstractBasePage {
     }
 
     @FindBy(xpath = "//*[@id=\"LogoContent\"]/a/img")
-    WebElement logo;
+    public WebElement logo;
 
     @FindBy(xpath = "somexpath")
-    WebElement searchInput;
+    public WebElement searchInput;
 
     @FindBy(xpath = "somexpath")
     WebElement searchButton;
 
+    @FindBy(xpath ="//div/a[2]" )
+    public WebElement signInButton;
     public abstract void search(String searchTest);
     public abstract void clicLogo();
 }

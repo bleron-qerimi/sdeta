@@ -9,7 +9,7 @@ import java.util.Random;
 public class GeneralSteps extends Hooks {
 
     @Test
-    public static void goToEnv(String env){
+    public static void gotToEnv(String env){
         if(env.equalsIgnoreCase("JPetStore")) {
             driver.get(ConfigurationReader.get("url2"));
             Assert.assertTrue(driver.getTitle().contains(ConfigurationReader.get("Jtitle")));
@@ -29,7 +29,7 @@ public class GeneralSteps extends Hooks {
     }
 
     @Test
-    public void anPreconditon() {
+    public void anzPreconditon() {
         Random random=new Random();
         driver.get(pageintionUrl(random.nextInt(50)));
     }
