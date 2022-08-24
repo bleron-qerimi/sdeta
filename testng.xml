@@ -44,6 +44,11 @@
             <class name="com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart"></class>
             <class name="com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout"></class>
 
+            <!-- Eron Test Cases -->
+            <class name="com.sqa.academy.actions.SDETA2.MissingDataOnTheUserIdAndPasswordField"></class>
+            <class name="com.sqa.academy.actions.SDETA2.TheUserHasAnExistingAccountAndTriesToSignUp"></class>
+            <class name="com.sqa.academy.actions.SDETA2.SignUpProcedurePetshop"></class>
+
         </classes>
     </test>
 </suite>
