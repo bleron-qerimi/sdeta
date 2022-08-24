@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Hello(failed)">
+    <classes>
+      <class name="com.sqa.academy.actions.SDETA43.RedirectToNewView">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Redirect"/>
+        </methods>
+      </class> <!-- com.sqa.academy.actions.SDETA43.RedirectToNewView -->
+      <class name="com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout">
+        <methods>
+          <include name="setUp"/>
+          <include name="checkDesiredTabularLayout"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout -->
+      <class name="com.sqa.academy.actions.SDETA55.CartRemoveButton">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="removeFromCart"/>
+        </methods>
+      </class> <!-- com.sqa.academy.actions.SDETA55.CartRemoveButton -->
+      <class name="com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser">
+        <methods>
+          <include name="setUp"/>
+          <include name="addToCart"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser -->
+    </classes>
+  </test> <!-- Hello(failed) -->
+  <test thread-count="5" name="LabinotGjoka(failed)">
+    <classes>
+      <class name="com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderOnCenterOfThePage">
+        <methods>
+          <include name="checkOrderTopMid"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderOnCenterOfThePage -->
+      <class name="com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderInTopCenterOfThePage">
+        <methods>
+          <include name="setUp"/>
+          <include name="checkOrderTopMid"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sqa.academy.actions.SDETA51.VerifyingPetCategoryOrderInTopCenterOfThePage -->
+    </classes>
+  </test> <!-- LabinotGjoka(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
