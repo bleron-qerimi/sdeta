@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/LabinotGjoka/IdeaProjects/sdeta">
+        <classes>
+            <class name="com.sqa.academy.actions.TheUserShouldSeeAllThePetsInASpecificOrder">
+<!--                <methods>-->
+<!--                    <include name="petOrder"/>-->
+<!--                </methods>-->
+            </class>
+
+            <class name="com.sqa.academy.actions.SDETA55.AddingToCartFromItemView"/>
+            <class name="com.sqa.academy.actions.SDETA55.AddingToShoppingCartFromSpeciesView"/>
+            <class name="com.sqa.academy.actions.SDETA55.CartRemoveButton"/>
+            <class name="com.sqa.academy.actions.SDETA55.ItemsInCartAfterClosingBrowser"/>
+            <class name="com.sqa.academy.actions.SDETA55.CartUpdateButton"/>
+            <class name="com.sqa.academy.actions.SDETA55.ShoppingCartView"/>
+
+
+            <!-- Bleron first story test case classes-->
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.LoginWithCorrectCredentials"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.TryToLoginWithWrongCredentials"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckSessionAfterPageReload"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckUnexpiredSession"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckPromptAfterSessionExpiration"></class>
+            <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckErrorMessageAfterWrongCredentials"></class>
+
+            <!-- Bleron second story test case classes  -->
+            <class name="com.sqa.academy.actions.SDETA53PetViews.SpeciesSubViewRedirection"></class>
+            <class name="com.sqa.academy.actions.SDETA53PetViews.CheckPetViewReturnOption"></class>
+            <class name="com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart"></class>
+            <class name="com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout"></class>
+
+        </classes>
+    </test>
+</suite>
