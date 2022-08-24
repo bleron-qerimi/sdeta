@@ -6,6 +6,7 @@ import com.sqa.academy.utils.ConfigurationReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -21,15 +22,22 @@ public class PaginationButtonsForNav extends Hooks {
         WebElement coordinates=driver.findElement(By.xpath("//*[@id=\"pagination\"]/ul"));
         Point points=coordinates.getLocation();
         int x=points.getX();
-        int y=points.getY();
-        System.out.println("Buttons are arranged under the table with these coordinates :"+x+", "+y);
+
+        System.out.println("Buttons are arranged under the table with these coordinates :"+x+", ");
 
 
-        List<WebElement> arrangedButtons=driver.findElements(By.xpath("//*[@id=\"pagination\"]/ul/li/a"));
-        System.out.println("Buttons arranged from left to right: "+arrangedButtons.size());
+        WebElement prevBtn =driver.findElement(By.xpath("//a[contains(text(), 'Previous')]"));
 
-        for(WebElement row:arrangedButtons){
-            System.out.println("Button: "+row.getText());
-        }
+        WebElement dispBtn =driver.findElement(By.xpath("//a[contains(text(), 'Displaying')]"));
+
+        WebElement nxtBtn =driver.findElement(By.xpath("//a[contains(text(), 'Next')]"));
+        //System.out.println("Buttons arranged from left to right: "+arrangedButtons.size());
+
+        Assert.assertTrue(nxtBtn.getLocation().getX()<dispBtn.getLocation().getX());
+        Assert.assertTrue(dispBtn.getLocation().getX()<prevBtn.getLocation().getX());
+
+
+
+
     }
 }
