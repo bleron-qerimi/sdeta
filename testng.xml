@@ -25,11 +25,11 @@
             <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckPromptAfterSessionExpiration"></class>
             <class name="com.sqa.academy.actions.SDETA3UserLogin.CheckErrorMessageAfterWrongCredentials"></class>
 
-            <!-- Bleron second story test case classes  -->
+            <!-- Bleron second story test case classes
             <class name="com.sqa.academy.actions.SDETA53PetViews.SpeciesSubViewRedirection"></class>
             <class name="com.sqa.academy.actions.SDETA53PetViews.CheckPetViewReturnOption"></class>
             <class name="com.sqa.academy.actions.SDETA53PetViews.ClickToAddToCart"></class>
-            <class name="com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout"></class>
+            <class name="com.sqa.academy.actions.SDETA53PetViews.CheckDesiredTabularLayout"></class> -->
 
         </classes>
     </test>

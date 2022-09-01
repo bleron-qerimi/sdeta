@@ -18,17 +18,18 @@ public class CheckErrorMessageAfterWrongCredentials extends Hooks {
         HomePage homePage = new HomePage(driver);
         homePage.signInButtonHomePage.click();
 
-        //assert we're on sign in page
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://petstore.octoperf.com/actions/Account.action"));
-
+        // assert we're on sign in page
         SignInPage signInPage = new SignInPage(driver);
-        signInPage.usernameInputField.sendKeys("notjohndoe");
-        signInPage.passwordInputField.sendKeys("notjohndoe");
-        signInPage.signInButtonSignInPage.click();
+        Assert.assertTrue(signInPage.isSignInButtonSignInPageDisplayed());
+
+        //Input incorrect credentials and click
+        signInPage.enterUsername("notjohndoe");
+        signInPage.passwordInputField.clear();
+        signInPage.enterPassword("notjohndoe");
+        signInPage.signInButtonClick();
 
         //check if error message shows up
-
-        Assert.assertEquals(signInPage.getloginFailedErrorMesage(),"Invalid username or password. Signon failed.");
+        Assert.assertEquals(signInPage.getLoginFailedErrorMessage(),"Invalid username or password. Signon failed.");
 
     }
 }

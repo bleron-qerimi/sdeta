@@ -14,28 +14,32 @@ public class CheckSessionAfterPageReload extends Hooks {
 
     @Test
     public static void checkSessionAfterPageReload() {
+
         //Go to env
         GeneralSteps.goToEnv("JPetStore");
+
+        //Go to sign in page
         HomePage homePage = new HomePage(driver);
-        homePage.signInButtonHomePage.click();
+        homePage.signInButtonHomePageClick();
 
-        //assert we're on sign in page
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://petstore.octoperf.com/actions/Account.action?signonForm="));
-
+        // assert we're on sign in page
         SignInPage signInPage = new SignInPage(driver);
-        signInPage.usernameInputField.sendKeys("johndoe");
-        signInPage.passwordInputField.sendKeys("johndoe");
-        signInPage.signInButtonSignInPage.click();
+        Assert.assertTrue(signInPage.isSignInButtonSignInPageDisplayed());
 
+        //Input the correct credentials and click
+        signInPage.enterUsername("johndoe");
+        signInPage.passwordInputField.clear();
+        signInPage.enterPassword("johndoe");
+        signInPage.signInButtonClick();
+
+        // assert we've logged in by checking if there is a welcoming text
         SignedInPage signedInPage = new SignedInPage(driver);
-
-        // assert we've logged in
-        Assert.assertEquals(signedInPage.getWelcomeText(),"Welcome John!");
+        Assert.assertEquals(signedInPage.getWelcomeText(), "Welcome John!");
 
         // reload page to check session
         driver.navigate().refresh();
 
-        //assert we are still logged in
-        Assert.assertEquals(signedInPage.getWelcomeText(),"Welcome John!");
+        //assert we're still signed in
+        Assert.assertEquals(signedInPage.getWelcomeText(), "Welcome John!");
     }
 }

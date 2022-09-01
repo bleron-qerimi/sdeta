@@ -11,37 +11,40 @@ import org.openqa.selenium.support.PageFactory;
 public class SignInPage {
 
     public SignInPage(WebDriver driver){
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(name="username")
     public WebElement usernameInputField;
 
-    @FindBy(name = "password")
-    public WebElement passwordInputField;
-
-    @FindBy(name = "signon")
-    public WebElement signInButtonSignInPage;
-
     public void enterUsername(String arg1){
         usernameInputField.sendKeys(arg1);
     }
+
+    @FindBy(name = "password")
+    public WebElement passwordInputField;
 
     public void enterPassword(String arg1){
         passwordInputField.sendKeys(arg1);
     }
 
+    @FindBy(name = "signon")
+    public WebElement signInButtonSignInPage;
+
     public void signInButtonClick(){
         signInButtonSignInPage.click();
     }
 
-    @FindBy(xpath = "//*[@id='Content']/ul/li")
-    public  WebElement loginFailedErrorMesage;
-
-    public  String getloginFailedErrorMesage(){
-
-        String loginFailedErrorString = loginFailedErrorMesage.getText();
-
-        return loginFailedErrorString;
+    public boolean isSignInButtonSignInPageDisplayed(){
+        return signInButtonSignInPage.isDisplayed();
     }
+
+    @FindBy(xpath = "//*[@id='Content']/ul/li")
+    public  WebElement loginFailedErrorMessage;
+
+    public String getLoginFailedErrorMessage(){
+        return loginFailedErrorMessage.getText();
+    }
+
+
 }

@@ -5,38 +5,40 @@ import com.sqa.academy.actions.Hooks;
 import com.sqa.academy.pages.jPetStore.HomePage;
 import com.sqa.academy.pages.jPetStore.SignInPage;
 import com.sqa.academy.pages.jPetStore.SignedInPage;
-import org.openqa.selenium.Cookie;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static org.openqa.selenium.Keys.ENTER;
 
 public class CheckUnexpiredSession extends Hooks {
 
     @Test
     public static void checkUnexpiredSession() throws InterruptedException {
+
         //Go to env
         GeneralSteps.goToEnv("JPetStore");
+
+        //Go to sign in page
         HomePage homePage = new HomePage(driver);
-        homePage.signInButtonHomePage.click();
+        homePage.signInButtonHomePageClick();
 
-        //assert we're on sign in page
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://petstore.octoperf.com/actions/Account.action"));
-
+        // assert we're on sign in page
         SignInPage signInPage = new SignInPage(driver);
-        signInPage.usernameInputField.sendKeys("johndoe1");
-        signInPage.passwordInputField.sendKeys("johndoe1");
-        signInPage.signInButtonSignInPage.click();
+        Assert.assertTrue(signInPage.isSignInButtonSignInPageDisplayed());
 
-        //assert we've logged in
+        //Input the correct credentials and click
+        signInPage.enterUsername("johndoe");
+        signInPage.passwordInputField.clear();
+        signInPage.enterPassword("johndoe");
+        signInPage.signInButtonClick();
+
+        // assert we've logged in by checking if there is a welcoming text
         SignedInPage signedInPage = new SignedInPage(driver);
-        Assert.assertEquals(signedInPage.getWelcomeText(),"Welcome John!");
+        Assert.assertEquals(signedInPage.getWelcomeText(), "Welcome John!");
 
         // reload page to check session
         driver.navigate().refresh();
 
-        //check if we're still logged in
-//        Assert.assertEquals(signedInPage.getWelcomeText(),"Welcome John!");
+        //assert session hasn't expired
+        Assert.assertEquals(signedInPage.getWelcomeText(), "Welcome John!");
 
     }
 

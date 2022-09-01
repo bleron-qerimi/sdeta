@@ -24,37 +24,33 @@ public class CheckPromptAfterSessionExpiration extends Hooks {
 
         //Go to env
         GeneralSteps.goToEnv("JPetStore");
+
+        //Go to sign in page
         HomePage homePage = new HomePage(driver);
-        homePage.signInButtonHomePage.click();
+        homePage.signInButtonHomePageClick();
 
         // assert we're on sign in page
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://petstore.octoperf.com/actions/Account.action"));
-
         SignInPage signInPage = new SignInPage(driver);
+        Assert.assertTrue(signInPage.isSignInButtonSignInPageDisplayed());
+
+        //Input the correct credentials and click
         signInPage.enterUsername("johndoe");
+        signInPage.passwordInputField.clear();
         signInPage.enterPassword("johndoe");
         signInPage.signInButtonClick();
 
-
-        //assert we've logged in
-        //WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-
+        // assert we've logged in by checking if there is a welcoming text
         SignedInPage signedInPage = new SignedInPage(driver);
-
-        //wait.until(ExpectedConditions.visibilityOf(signedInPage.welcomeTextElement));
         Assert.assertEquals(signedInPage.getWelcomeText(),"Welcome John!");
 
-        Cookie cookie=driver.manage().getCookieNamed("JSESSIONID");
-
-        //System.out.printf(cookie.getValue());
-
+        //Expire session
         driver.manage().deleteAllCookies();
 
         // reload page to check session
         driver.navigate().refresh();
 
-        //assert we're on sign in page
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://petstore.octoperf.com/actions/Account.action?signonForm="));
+        //assert we've signed out by checking if we're on homepage
+        Assert.assertEquals(homePage.getSignInButtonHomePageText(),"Sign In");
 
     }
 }

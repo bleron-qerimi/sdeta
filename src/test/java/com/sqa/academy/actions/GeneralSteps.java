@@ -9,7 +9,7 @@ import java.util.Random;
 public class GeneralSteps extends Hooks {
 
     @Test
-    public static void gotToEnv(String env){
+    public static void goToEnv(String env){
         if(env.equalsIgnoreCase("JPetStore")) {
             driver.get(ConfigurationReader.get("url2"));
             Assert.assertTrue(driver.getTitle().contains(ConfigurationReader.get("Jtitle")));

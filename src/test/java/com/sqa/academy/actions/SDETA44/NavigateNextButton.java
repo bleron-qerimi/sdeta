@@ -15,7 +15,7 @@ public class NavigateNextButton extends Hooks {
     ComputerDatabaseElements objdeleteInEditViewPage;
     @Test
     public void recordsOnSecondPage() throws Exception {
-        GeneralSteps.gotToEnv("Computer");
+        GeneralSteps.goToEnv("Computer");
         ComputerDatabaseElements databaseElements=new ComputerDatabaseElements(driver);
 
         objdeleteInEditViewPage= new ComputerDatabaseElements(driver);
